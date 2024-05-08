@@ -1,1 +1,1 @@
-# mkrdao_port_mgmt
+# Run the exploratory.ipynb file in the notebooks directory
