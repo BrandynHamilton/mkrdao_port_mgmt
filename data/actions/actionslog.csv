@@ -1,4 +1,11 @@
-,date,action
-0,2022-05-20 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'LP Vault_dai_ceiling': 2}"
-1,2022-06-13 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'BTC Vault_dai_ceiling': -1.5, 'LP Vault_dai_ceiling': 2}"
-2,2022-07-07 00:00:00+00:00,{'BTC Vault_dai_ceiling': -1.5}
+,date,action,sortino ratio
+0,2022-05-20 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -5, 'stETH Vault_dai_ceiling': 2.5, 'LP Vault_dai_ceiling': 2}",
+1,2022-06-14 00:00:00+00:00,,-1.1111889933504935
+2,2022-06-14 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'stETH Vault_dai_ceiling': 2.5, 'BTC Vault_dai_ceiling': -1.5, 'LP Vault_dai_ceiling': 2}",
+3,2022-07-09 00:00:00+00:00,,-0.6320461631654397
+4,2022-07-09 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'stETH Vault_dai_ceiling': 2.5, 'BTC Vault_dai_ceiling': -1.5, 'LP Vault_dai_ceiling': 2}",
+5,2022-08-03 00:00:00+00:00,,0.5582016644477823
+6,2022-08-03 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'stETH Vault_dai_ceiling': 2.5, 'BTC Vault_dai_ceiling': -1.5, 'Altcoin Vault_dai_ceiling': 2, 'PSM Vault_dai_ceiling': -3.5}",
+7,2022-08-28 00:00:00+00:00,,2.388978456293289
+8,2022-08-28 00:00:00+00:00,"{'ETH Vault_dai_ceiling': -2.5, 'stETH Vault_dai_ceiling': 2.5, 'Altcoin Vault_dai_ceiling': 2, 'PSM Vault_dai_ceiling': -3.5}",
+9,2022-09-21 00:00:00+00:00,,2.8357679428261022
