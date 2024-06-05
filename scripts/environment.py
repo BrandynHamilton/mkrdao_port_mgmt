@@ -1,3 +1,73 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import time
+from datetime import timedelta
+
+# Machine learning tools
+from sklearn.linear_model import LinearRegression, Ridge, MultiTaskLassoCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputRegressor
+from sklearn.feature_selection import mutual_info_regression
+
+# Deep Learning tools
+import tensorflow as tf
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Dropout, Input
+from keras.optimizers import Adam, RMSprop, SGD
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping
+from keras.regularizers import l2
+
+# Additional tools
+from scipy import signal
+from scipy.optimize import minimize
+from itertools import combinations, product
+
+# External data and APIs
+import yfinance as yf
+from dune_client.client import DuneClient
+import requests
+import streamlit as st
+
+from scripts.utils import mvo, historical_sortino, optimized_sortino, visualize_mvo_results, calc_cumulative_return
+
+import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
+import matplotlib as mpl
+
+# Disable scientific notation globally
+mpl.rcParams['axes.formatter.useoffset'] = False
+mpl.rcParams['axes.formatter.use_locale'] = False
+mpl.rcParams['axes.formatter.limits'] = (-5, 6)
+
+# Function to apply ScalarFormatter globally
+def set_global_scalar_formatter():
+    for axis in ['x', 'y']:
+        plt.gca().ticklabel_format(axis=axis, style='plain', useOffset=False)
+    plt.gca().yaxis.set_major_formatter(ScalarFormatter())
+    plt.gca().xaxis.set_major_formatter(ScalarFormatter())
+
+# Register the formatter with a default plot
+plt.figure()
+set_global_scalar_formatter()
+plt.close()
+"""
+random.seed(42)
+np.random.seed(42)
+tf.random.set_seed(42)
+"""
+dai_ceilings = [
+            'ETH Vault_dai_ceiling','stETH Vault_dai_ceiling','BTC Vault_dai_ceiling', 
+    'Altcoin Vault_dai_ceiling','Stablecoin Vault_dai_ceiling','LP Vault_dai_ceiling','RWA Vault_dai_ceiling','PSM Vault_dai_ceiling'
+        ]
+
 class SimulationEnvironment:
     def __init__(self, simulator, start_date, end_date, agent=None):
         self.simulator = simulator
@@ -146,7 +216,7 @@ class SimulationEnvironment:
         self.action_log.append({'date': self.current_date, 'current weights': current_weights})
         self.action_log.append({'date': self.current_date, 'target weights': target_weights})
         print('Current Financials:')
-        cumulative_return = visualize_mvo_results(current_daily_returns, current_downside_returns, current_excess_returns)
+        cumulative_return = calc_cumulative_return(current_daily_returns)
         self.action_log.append({'date': self.current_date, 'current cumulative return': cumulative_return.iloc[-1]})
 
         max_distance = sum(abs(1 - value) for value in target_weights.values())
@@ -185,3 +255,182 @@ class SimulationEnvironment:
         print('reward', reward)
         
         return reward_no_scale, current_weights
+
+"""
+
+
+
+
+
+
+test_data_copy.index = test_data_copy.index.tz_localize(None)
+
+# Assuming the necessary variables (simulation_data, features, targets, temporals) are defined and correct
+simulator_simulation_data = test_data_copy  # Assuming this is correctly defined with your actual data
+
+start_date = '2022-05-20'
+end_date = '2022-07-01'
+actions = {'stETH Vault_dai_ceiling': 5, 'ETH Vault_dai_ceiling': -5}  # Example action
+ 
+test_simulator = RL_VaultSimulator(simulation_data, simulation_data, features, targets, temporals, start_date, end_date, scale_factor=300000000, minimum_value_factor=0.05, volatility_window=250)
+
+#test_simulator.set_parameters(scale_factor=300000000, minimum_value_factor=0.05, volatility_window=250)
+test_simulator.train_model()
+
+test_environment = SimulationEnvironment(test_simulator, start_date, end_date)
+test_environment.run(actions)
+
+test_simulator.plot_simulation_results()
+
+
+# ### Results of Sim
+
+# In[861]:
+
+
+test_data_copy[['mcap_total_volume']]
+
+
+# In[862]:
+
+
+sim_results = test_simulator.results
+sim_results.describe()
+
+
+# In[863]:
+
+
+sim_results.index.duplicated()
+
+
+# ### Backtesting to Historical Data 
+
+# In[864]:
+
+
+evaluate_predictions(sim_results, historical)
+
+
+# ### MVO Comparison cleaning
+
+# In[865]:
+
+
+test_data['RWA Vault_collateral_usd']
+
+
+# In[866]:
+
+
+start_date_dt = pd.to_datetime(start_date)  # Convert string to datetime
+historical_cutoff = start_date_dt - pd.DateOffset(days=1)
+historical_cutoff
+
+
+# In[867]:
+
+
+historical_data = historical[historical.index <= historical_cutoff]
+combined_data = pd.concat([historical_data, sim_results])
+print(combined_data)
+
+
+# In[868]:
+
+
+combined_data.index = combined_data.index.tz_localize(None)
+test_data['RWA Vault_collateral_usd'].index = test_data['RWA Vault_collateral_usd'].index.tz_localize(None)
+
+
+#Since RWA is not a target, we need to add back in for MVO calculations
+sim_w_RWA = combined_data.merge(test_data['RWA Vault_collateral_usd'], left_index=True, right_index=True, how='left')
+# Optional: Sort the DataFrame by index if it's not already sorted
+sim_w_RWA.sort_index(inplace=True)
+
+# Now 'combined_data' contains both historical and simulation data in one DataFrame
+sim_w_RWA.plot()
+sim_w_RWA
+
+
+# In[869]:
+
+
+sim_cutoff = sim_w_RWA.index.max()
+sim_cutoff
+
+
+# In[870]:
+
+
+# Assuming 'test_data' is the DataFrame with the timezone-aware index
+test_data.index = pd.to_datetime(test_data.index).tz_localize(None)
+
+# Now perform the merge
+historical_sim = test_data[test_data.index <= sim_cutoff]
+historical_sim = historical_sim[targets].merge(test_data['RWA Vault_collateral_usd'], left_index=True, right_index=True, how='left')
+historical_sim.plot()
+historical_sim
+
+
+# ### Simulation MVO Scores
+
+# In[871]:
+
+
+# Optimized Weights for Simulation
+
+portfolio_mvo_weights, portfolio_returns, portfolio_composition, total_portfolio_value = mvo(sim_w_RWA)
+print('optimized weights:', portfolio_mvo_weights)
+print('current composition:', portfolio_composition.iloc[-1])
+print(f'current portfolio value: ${total_portfolio_value.iloc[-1]:,.2f}')
+
+
+# In[872]:
+
+
+sim_portfolio_daily_returns,  sim_downside_returns, sim_excess_returns, sim_sortino_ratio = historical_sortino(portfolio_returns,portfolio_composition)
+
+
+# In[873]:
+
+
+optimized_returns = visualize_mvo_results(sim_portfolio_daily_returns, sim_downside_returns, sim_excess_returns)
+
+
+# In[874]:
+
+
+optimized_returns.plot()
+print('sim cumulative return', optimized_returns.iloc[-1])
+
+
+# ### Historical MVO Scores
+
+# In[875]:
+
+
+historical_optimized_weights, historical_portfolio_returns, historical_portfolio_composition, historical_total_portfolio_value = mvo(historical_sim)
+print('average daily return per vault:', historical_portfolio_returns.mean())
+print('current composition:', historical_portfolio_composition.iloc[-1])
+print(f'current portfolio value: ${historical_total_portfolio_value.iloc[-1]:,.2f}')
+
+
+# In[876]:
+
+
+historical_portfolio_daily_returns,  historical_downside_returns, historical_excess_returns, historical_sortino_ratio = historical_sortino(historical_portfolio_returns,historical_portfolio_composition)
+
+
+# In[877]:
+
+
+historical_returns = visualize_mvo_results(historical_portfolio_daily_returns, historical_downside_returns, historical_excess_returns)
+
+
+# In[878]:
+
+
+historical_returns.plot()
+print('historical cumulative return', historical_returns.iloc[-1])
+"""

@@ -1,4 +1,45 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import time
+from datetime import timedelta
 
+# Machine learning tools
+from sklearn.linear_model import LinearRegression, Ridge, MultiTaskLassoCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputRegressor
+from sklearn.feature_selection import mutual_info_regression
+
+# Deep Learning tools
+import tensorflow as tf
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Dropout, Input
+from keras.optimizers import Adam, RMSprop, SGD
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping
+from keras.regularizers import l2
+
+# Additional tools
+from scipy import signal
+from scipy.optimize import minimize
+from itertools import combinations, product
+
+# External data and APIs
+import yfinance as yf
+from dune_client.client import DuneClient
+import requests
+import streamlit as st
+"""
+random.seed(42)
+np.random.seed(42)
+tf.random.set_seed(42)
+"""
 class RlAgent:
     def __init__(self, action_space, target_weights, vault_action_ranges, learning_rate=0.01, discount_factor=0.95,
                  exploration_rate=0.9, exploration_decay=0.95, min_exploration_rate=0.01, initial_strategy_period=0,
@@ -97,7 +138,7 @@ class RlAgent:
             reason = 'exploitation (based on learned values aiming for optimal performance)'
 
         if self.current_cycle > self.initial_strategy_period:
-            self.epsilon *= (self.epsilon_decay ** 2)  # Example of more aggressive decay
+            self.epsilon *= (self.epsilon_decay ** 3)  # 2 or 3
         elif self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 

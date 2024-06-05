@@ -1,4 +1,44 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import time
+from datetime import timedelta
 
+# Machine learning tools
+from sklearn.linear_model import LinearRegression, Ridge, MultiTaskLassoCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputRegressor
+from sklearn.feature_selection import mutual_info_regression
+
+# Deep Learning tools
+import tensorflow as tf
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Dropout, Input
+from keras.optimizers import Adam, RMSprop, SGD
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping
+from keras.regularizers import l2
+
+# Additional tools
+from scipy import signal
+from scipy.optimize import minimize
+from itertools import combinations, product
+
+# External data and APIs
+import yfinance as yf
+from dune_client.client import DuneClient
+import requests
+import streamlit as st
+
+random.seed(42)
+np.random.seed(42)
+tf.random.set_seed(42)
 
 class VaultSimulator_baseline:
     def __init__(self, data, initial_data, features, targets, temporals, start_date, alpha=300):
@@ -168,3 +208,71 @@ class VaultSimulator_baseline:
                 print(f"RMSE: {rmse}\n")
             except KeyError:
                 print(f"Data for {vault} Vault not available in the dataset.")
+
+
+# Run the simulation
+simulation_data = test_data_copy
+start_date = '2022-05-20'
+simulation = VaultSimulator_baseline(simulation_data, test_data_copy, features, targets, temporals, start_date)
+simulation.train_model()
+simulation.run_simulation()
+simulation.plot_simulation_results()
+
+
+# In[842]:
+
+
+historical = test_data[targets]
+result = simulation.results
+
+
+
+evaluate_predictions(result, historical)
+
+
+# In[843]:
+
+
+filter = test_data[(test_data.index <= '2022-05-26') & (test_data.index >='2022-05-20')]
+
+filter[targets]
+filter['stETH Vault_market_price'].plot()
+
+
+# In[844]:
+
+
+filter
+
+
+# In[845]:
+
+
+filtered_columns = filter.columns[~filter.columns.isin(temporals)]
+filtered_data = filter[filtered_columns]
+filtered_data.columns
+filtered_data
+
+
+# In[846]:
+
+filter['mcap_total_volume']
+
+
+# In[847]:
+
+
+list(filter[[f for f in filter.columns if not 'ma' in f and not 'ceiling' in f]].columns)
+
+
+# In[848]:
+
+
+historical.plot()
+
+
+# In[849]:
+
+
+result = simulation.results
+result

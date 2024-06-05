@@ -1,5 +1,62 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import time
+from datetime import timedelta
 
+# Machine learning tools
+from sklearn.linear_model import LinearRegression, Ridge, MultiTaskLassoCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputRegressor
+from sklearn.feature_selection import mutual_info_regression
 
+# Deep Learning tools
+import tensorflow as tf
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Dropout, Input
+from keras.optimizers import Adam, RMSprop, SGD
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping
+from keras.regularizers import l2
+
+# Additional tools
+from scipy import signal
+from scipy.optimize import minimize
+from itertools import combinations, product
+
+# External data and APIs
+import yfinance as yf
+from dune_client.client import DuneClient
+import requests
+import streamlit as st
+
+import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
+import matplotlib as mpl
+
+# Disable scientific notation globally
+mpl.rcParams['axes.formatter.useoffset'] = False
+mpl.rcParams['axes.formatter.use_locale'] = False
+mpl.rcParams['axes.formatter.limits'] = (-5, 6)
+
+def apply_scalar_formatter(ax):
+    for axis in [ax.xaxis, ax.yaxis]:
+        if isinstance(axis.get_major_formatter(), ScalarFormatter):
+            axis.set_major_formatter(ScalarFormatter())
+            axis.get_major_formatter().set_scientific(False)
+            axis.get_major_formatter().set_useOffset(False)
+
+"""
+random.seed(42)
+np.random.seed(42)
+tf.random.set_seed(42)
+"""
 class RL_VaultSimulator:
     def __init__(self, data, initial_data, features, targets, temporals, start_date, end_date, scale_factor=300000000,minimum_value_factor=0.05,volatility_window=250, alpha=100):
         self.data = data[data.index <= pd.to_datetime(start_date).tz_localize(None)]
@@ -203,32 +260,6 @@ class RL_VaultSimulator:
             if dai_ceiling_col in self.data.columns:
                 prev_dai_ceiling_col = f'{vault}_prev_dai_ceiling'
                 self.data[prev_dai_ceiling_col] = self.data[dai_ceiling_col].shift(1)
-           
-# Call this method with the correct index during your simulation
-# For instance, after updating the state in your simulation:
-# simulation.recalculate_temporal_features(current_index)
-
-
-    
-    def plot_vault_data(self, column):
-        plt.figure(figsize=(10, 6))
-        plt.plot(self.data.index, self.data[column], label=column)
-        plt.title(f"Time Series for {column}")
-        plt.xlabel("Date")
-        plt.ylabel("Value")
-        plt.legend()
-        plt.grid(True)
-        plt.show()
-    def plot_simulation_results(self):
-        plt.figure(figsize=(14, 7))
-        for target in self.targets:
-            plt.plot(self.results.index, self.results[target], label=target)
-        plt.title("Simulation Results")
-        plt.xlabel('Date')
-        plt.ylabel('Values')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
     def print_summary_statistics(self, pre_data):
         for column in self.data.columns:
             if column not in pre_data.columns:
@@ -238,18 +269,64 @@ class RL_VaultSimulator:
             print(f"--- {column} ---")
             print("Pre-Simulation:\n", pre_stats)
             print("Post-Simulation:\n", post_stats, "\n")
+            
+    def plot_vault_data(self, column):
+        vault_usd_col = f'{column}_collateral_usd'
+        vault_dai_col = f'{column}_dai_ceiling'
+        fig, ax1 = plt.subplots(figsize=(10, 6))
+        
+        # Plot USD balance on the primary y-axis
+        ax1.plot(self.data.index, self.data[vault_usd_col], label=f'{column} USD Balance', color='blue')
+        ax1.set_xlabel("Date")
+        ax1.set_ylabel("USD Balance", color='blue')
+        ax1.tick_params(axis='y', labelcolor='blue')
+        ax1.legend(loc='upper left')
+        ax1.grid(True)
+        
+        # Create a secondary y-axis for the DAI ceiling
+        ax2 = ax1.twinx()
+        ax2.plot(self.data.index, self.data[vault_dai_col], label=f'{column} DAI Ceiling', color='orange')
+        ax2.set_ylabel("DAI Ceiling", color='orange')
+        ax2.tick_params(axis='y', labelcolor='orange')
+        ax2.legend(loc='upper right')
+        
+        fig.suptitle(f"Time Series for {column}")
+        
+        apply_scalar_formatter(ax1)
+        apply_scalar_formatter(ax2)
+        plt.show()
+        
+        
+    def plot_simulation_results(self):
+        fig, ax = plt.subplots(figsize=(14, 7))
+        for target in self.targets:
+            ax.plot(self.results.index, self.results[target], label=target)
+        ax.set_title("Simulation Results")
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Values')
+        ax.legend()
+        ax.grid(True)
+        #ax.ticklabel_format(useOffset=False, style='plain')
+        apply_scalar_formatter(ax)
+        plt.show()
+
     def plot_dai_ceilings_and_usd_balances(self, start_simulation_date, vault_names):
         if isinstance(start_simulation_date, str):
             start_simulation_date = pd.to_datetime(start_simulation_date)
         if not isinstance(self.data.index, pd.DatetimeIndex):
             self.data.index = pd.to_datetime(self.data.index)
+        
         fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(14, 10), sharex=True)
+        
         for vault in vault_names:
             axes[0].plot(self.data.index, self.data[f'{vault} Vault_dai_ceiling'], label=f'{vault} Dai Ceiling')
         axes[0].axvline(x=start_simulation_date, color='r', linestyle='--', label='Start of Simulation')
         axes[0].set_title('Dai Ceilings Over Time')
         axes[0].set_ylabel('Dai Ceiling')
         axes[0].legend()
+        #axes[0].ticklabel_format(useOffset=False, style='plain')
+        apply_scalar_formatter(axes[0])
+        
         for vault in vault_names:
             axes[1].plot(self.data.index, self.data[f'{vault} Vault_collateral_usd'], label=f'{vault} USD Balance')
         axes[1].axvline(x=start_simulation_date, color='r', linestyle='--', label='Start of Simulation')
@@ -257,6 +334,9 @@ class RL_VaultSimulator:
         axes[1].set_ylabel('USD Balance')
         axes[1].set_xlabel('Date')
         axes[1].legend()
+        #axes[1].ticklabel_format(useOffset=False, style='plain')
+        apply_scalar_formatter(axes[1])
+        
         plt.show()
 
     def calculate_error_metrics(self, actual_data):
@@ -273,3 +353,73 @@ class RL_VaultSimulator:
                 print(f"RMSE: {rmse}\n")
             except KeyError:
                 print(f"Data for {vault} Vault not available in the dataset.")
+
+"""
+simulation_data = test_data_copy  # Assuming this is defined with your actual data
+simulation_data.index = simulation_data.index.tz_localize(None)  # Remove timezone information
+start_date = '2022-05-20'
+end_date = '2024-03-20'
+
+simulation = RL_VaultSimulator(simulation_data, simulation_data, features, targets, temporals, start_date, end_date, scale_factor=300000000, minimum_value_factor=0.05, volatility_window=250)
+simulation.train_model()
+simulation.run_simulation(start_date)
+simulation.plot_simulation_results()
+
+
+# Plot Dai ceilings and USD balances
+vault_names = ['ETH', 'stETH', 'BTC', 'Altcoin', 'Stablecoin', 'LP', 'PSM', 'RWA']
+simulation.plot_dai_ceilings_and_usd_balances(start_date, vault_names)
+
+# Calculate error metrics against actual data (if available)
+# simulation.calculate_error_metrics(actual_data)
+
+
+# result = simulation.results
+# evaluate_predictions(result, historical)
+
+# ### Filter for MVO
+
+# In[852]:
+
+
+historical_data = historical[historical.index <= '2022-05-19']
+
+
+# In[853]:
+
+
+historical_data_mvo = historical_data.copy()
+
+historical_data_mvo.index= historical_data_mvo.index.tz_localize(None)
+
+
+# In[854]:
+
+
+result.index
+
+
+# In[855]:
+
+
+combined_data = pd.concat([historical_data_mvo, result])
+
+# Optional: Sort the DataFrame by index if it's not already sorted
+combined_data.sort_index(inplace=True)
+
+# Now 'combined_data' contains both historical and simulation data in one DataFrame
+print(combined_data)
+
+
+# In[856]:
+
+
+historical_comparison = historical[historical.index <= '2022-06-12']
+historical_comparison
+
+
+# In[857]:
+
+
+result
+"""

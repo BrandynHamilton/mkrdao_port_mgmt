@@ -1,3 +1,40 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import time
+from datetime import timedelta
+
+# Machine learning tools
+from sklearn.linear_model import LinearRegression, Ridge, MultiTaskLassoCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from sklearn.multioutput import MultiOutputRegressor
+from sklearn.feature_selection import mutual_info_regression
+
+# Deep Learning tools
+import tensorflow as tf
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Dropout, Input
+from keras.optimizers import Adam, RMSprop, SGD
+from keras.callbacks import ReduceLROnPlateau, EarlyStopping
+from keras.regularizers import l2
+
+# Additional tools
+from scipy import signal
+from scipy.optimize import minimize
+from itertools import combinations, product
+
+# External data and APIs
+import yfinance as yf
+from dune_client.client import DuneClient
+import requests
+import streamlit as st
 
 def mvo(data, annual_risk_free_rate=0.05, penalty_factor=10000):  # Increased penalty factor
     portfolio = data[['BTC Vault_collateral_usd', 'ETH Vault_collateral_usd', 'stETH Vault_collateral_usd', 
@@ -42,23 +79,6 @@ def mvo(data, annual_risk_free_rate=0.05, penalty_factor=10000):  # Increased pe
         return optimized_weights, log_returns, composition, total_portfolio_value
     else:
         raise Exception('Optimization did not converge')
-
-# Example usage with your data variable
-# all_data_mvo, all_data_returns, all_data_composition, all_data_portfolio_value = mvo(your_data_variable)
-
-
-# In[802]:
-
-
-## w/o percent columsn
-
-
-
-# In[803]:
-
-
-
-# In[804]:
 
 
 def optimized_sortino(returns_df, weights, annual_risk_free_rate=0.05):
@@ -208,3 +228,163 @@ def visualize_mvo_results(daily_returns, downside_returns, excess_returns):
     plt.show()
 
     return optimized_cumulative_returns
+
+def calc_cumulative_return(daily_returns):
+    optimized_cumulative_returns = (1 + daily_returns).cumprod()
+    return optimized_cumulative_returns
+
+def evaluate_predictions(predictions, historical):
+    # Ensure indexes are properly aligned
+    predictions.index = pd.to_datetime(predictions.index).tz_localize(None)
+    historical.index = pd.to_datetime(historical.index).tz_localize(None)
+    
+    if not predictions.index.equals(historical.index):
+        print("Warning: Indexes do not match, aligning them...")
+        # Align the data by index
+        combined = predictions.join(historical, lsuffix='_pred', rsuffix='_hist', how='inner')
+    else:
+        combined = predictions.join(historical, lsuffix='_pred', rsuffix='_hist')
+    
+    vault_names = ['ETH Vault', 'stETH Vault', 'BTC Vault', 'Altcoin Vault', 'Stablecoin Vault', 'LP Vault', 'PSM Vault']
+    metrics = {}
+
+    
+    
+    for vault in vault_names:
+        pred_col = f'{vault}_collateral_usd_pred'
+        hist_col = f'{vault}_collateral_usd_hist'
+        
+        if pred_col in combined.columns and hist_col in combined.columns:
+            mse = mean_squared_error(combined[hist_col], combined[pred_col])
+            mae = mean_absolute_error(combined[hist_col], combined[pred_col])
+            rmse = np.sqrt(mse)
+            r2 = r2_score(combined[hist_col], combined[pred_col])
+            metrics[vault] = {'MSE': mse, 'MAE': mae, 'RMSE': rmse, 'R2': r2}
+            
+            # Plotting
+            plt.figure(figsize=(12, 6))
+            plt.plot(combined.index, combined[hist_col], label='Historical', marker='o')
+            plt.plot(combined.index, combined[pred_col], label='Predicted', linestyle='--', marker='x')
+            plt.title(f'{vault} Collateral USD Comparison')
+            plt.xlabel('Date')
+            plt.ylabel('Collateral USD')
+            plt.legend()
+            plt.grid(True)
+            plt.show()
+        else:
+            print(f"Missing columns for {vault}")
+            metrics[vault] = 'Missing data'
+    
+    return metrics
+
+def generate_action_space(vault_action_ranges):
+    action_space = {}
+    for vault, limits in vault_action_ranges.items():
+        if isinstance(limits, list):  # If specific steps are provided, use them
+            action_space[vault] = limits
+        else:  # Generate a range between min and max with the given step
+            min_val, max_val, step = limits
+            action_space[vault] = list(np.arange(min_val, max_val + step, step))
+    return action_space
+
+def plot_cv_results(x_st, y_st, model, cv, title_base="CV Fold"):
+    fig, axes = plt.subplots(nrows=cv.get_n_splits(), ncols=1, figsize=(10, 20), sharex=True)
+    
+    for idx, (train_index, test_index) in enumerate(cv.split(x_st)):
+        X_train, X_test = x_st.iloc[train_index], x_st.iloc[test_index]
+        y_train, y_test = y_st.iloc[train_index], y_st.iloc[test_index]
+
+        # Fit the model
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+
+        # Plot
+        ax = axes[idx]
+        ax.plot(X_test.index, y_test, label='Actual', color='blue', marker='o')
+        ax.plot(X_test.index, y_pred, label='Predicted', linestyle='--', color='red', marker='x')
+        ax.set_title(f"{title_base} {idx+1} - MAE: {mean_absolute_error(y_test, y_pred):.2f}, R²: {r2_score(y_test, y_pred):.2f}")
+        ax.legend()
+    
+    plt.tight_layout()
+    plt.show()
+
+def plot_multioutput_cv_results(X, y, n_splits=5, alpha=100, title="CV Results with Ridge Regularization"):
+    tscv = TimeSeriesSplit(n_splits=n_splits)
+    fig, axes = plt.subplots(nrows=n_splits, ncols=1, figsize=(15, 3 * n_splits))
+
+    # Using Ridge with regularization
+    for idx, (train_index, test_index) in enumerate(tscv.split(X)):
+        X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+        y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+        # Multioutput with Ridge regression
+        model = MultiOutputRegressor(Ridge(alpha=alpha))
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+
+        mae = mean_absolute_error(y_test, y_pred, multioutput='raw_values')
+        r2 = r2_score(y_test, y_pred, multioutput='raw_values')
+
+        ax = axes[idx]
+        # Assuming the first output for simplicity in plotting
+        ax.plot(y_test.index, y_test.iloc[:, 0], label='Actual', marker='o', linestyle='-', color='blue')
+        ax.plot(y_test.index, y_pred[:, 0], label='Predicted', marker='x', linestyle='--', color='red')
+        ax.set_title(f"{title} {idx+1} - MAE: {mae[0]:.2f}, R²: {r2[0]:.2f}")
+        ax.legend()
+
+    plt.tight_layout()
+    plt.show()
+
+def plot_regression_time_series(X_train, X_test, y_train, y_test, y_train_pred, y_test_pred, title_base):
+    # Assuming y_train and y_test are DataFrame with multiple columns for each target
+    num_targets = y_train.shape[1]  # Number of target variables
+    
+    for i in range(num_targets):
+        # Create DataFrames for plotting
+        target_name = y_train.columns[i]
+        train_df = pd.DataFrame({
+            'Actual': y_train.iloc[:, i],
+            'Predicted': y_train_pred[:, i]
+        }, index=X_train.index)
+        
+        test_df = pd.DataFrame({
+            'Actual': y_test.iloc[:, i],
+            'Predicted': y_test_pred[:, i]
+        }, index=X_test.index)
+        
+        # Combine and sort the DataFrames
+        combined_df = pd.concat([train_df, test_df])
+        combined_df.sort_index(inplace=True)
+        
+        # Plotting
+        plt.figure(figsize=(12, 6))
+        plt.plot(combined_df.index, combined_df['Actual'], label='Actual Values', color='blue')
+        plt.plot(combined_df.index, combined_df['Predicted'], label='Predicted Values', linestyle='--', color='red')
+        plt.title(f"{title_base} for {target_name}")
+        plt.xlabel('Date')
+        plt.ylabel('Collateral in USD')
+        plt.legend()
+        plt.show()
+
+
+
+# In[700]:
+
+
+def plot_single_regression_time_series(X_train, X_test, y_train, y_test, y_train_pred, y_test_pred, title):
+    y_train_df = pd.DataFrame({'Actual': y_train, 'Predicted': y_train_pred}, index=X_train.index)
+    y_test_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_test_pred}, index=X_test.index)
+    
+    # Combine and sort the DataFrames
+    combined_df = pd.concat([y_train_df, y_test_df])
+    combined_df.sort_index(inplace=True)
+    
+    # Plotting
+    plt.figure(figsize=(12, 6))
+    plt.plot(combined_df.index, combined_df['Actual'], label='Actual Values', color='blue')
+    plt.plot(combined_df.index, combined_df['Predicted'], label='Predicted Values', linestyle='--', color='orange')
+    plt.title(title)
+    plt.xlabel('Date')
+    plt.ylabel('Collateral in USD')
+    plt.legend()
+    plt.show()

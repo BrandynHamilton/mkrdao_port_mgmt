@@ -1,0 +1,1031 @@
+date,env reset start date,get state calculated portfolio value,action,mvo calculated current portfolio value,calculated optimized weights,current composition,agent weights updated to,current sortino ratio,target sortino ratio,current weights,target weights,current cumulative return,Distance penalty,Scaled Sortino diff,Reward,Reward no scale,dai ceilings
+2022-05-20,2022-05-20,,,,,,,,,,,,,,,,
+2022-05-20,,9138785768.037464,,,,,,,,,,,,,,,
+2022-05-20,2022-05-20,,,,,,,,,,,,,,,,
+2022-05-20,,9138785768.037464,,,,,,,,,,,,,,,
+2022-05-20,,,"{'stETH Vault_dai_ceiling': 0.08813080107727422, 'ETH Vault_dai_ceiling': 0.39771372790941795, 'BTC Vault_dai_ceiling': 0.391530729474708, 'Altcoin Vault_dai_ceiling': 0.15791873865384198, 'Stablecoin Vault_dai_ceiling': -0.23205520719157335, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': 0.01851094544808063}",,,,,,,,,,,,,,
+2022-06-14,,9180057918.455873,,,,,,,,,,,,,,,
+2022-06-14,,,,9230928327.455873,,,,,,,,,,,,,
+2022-06-14,,,,,"[0.1        0.05       0.5        0.1        0.01       0.07539926
+ 0.02       0.14460074]",,,,,,,,,,,,
+2022-06-14,,,,,,"BTC Vault_collateral_usd          0.15325
+ETH Vault_collateral_usd          0.35607
+stETH Vault_collateral_usd        0.06105
+Stablecoin Vault_collateral_usd   0.05838
+Altcoin Vault_collateral_usd      0.05345
+LP Vault_collateral_usd           0.09670
+RWA Vault_collateral_usd          0.00551
+PSM Vault_collateral_usd          0.21561
+Name: 2022-06-13 00:00:00, dtype: float64",,,,,,,,,,,
+2022-06-14,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000043278, 'ETH Vault_collateral_usd': 0.05000000000069076, 'stETH Vault_collateral_usd': 0.49999999999926875, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0753992644913433, 'RWA Vault_collateral_usd': 0.019999999999559533, 'PSM Vault_collateral_usd': 0.1446007355087186}",,,,,,,,,,
+2022-06-14,,,,,,,,-1.2801787962256286,,,,,,,,,
+2022-06-14,,,,,,,,,9.221791883081115,,,,,,,,
+2022-06-14,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1532495239015604, 'ETH Vault_collateral_usd': 0.35606547544780365, 'stETH Vault_collateral_usd': 0.061045118072704185, 'Stablecoin Vault_collateral_usd': 0.05837759118874678, 'Altcoin Vault_collateral_usd': 0.05344752484070533, 'LP Vault_collateral_usd': 0.09669798836138001, 'RWA Vault_collateral_usd': 0.00551086599261034, 'PSM Vault_collateral_usd': 0.21560591219448938}",,,,,,,
+2022-06-14,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000043278, 'ETH Vault_collateral_usd': 0.05000000000069076, 'stETH Vault_collateral_usd': 0.49999999999926875, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0753992644913433, 'RWA Vault_collateral_usd': 0.019999999999559533, 'PSM Vault_collateral_usd': 0.1446007355087186}",,,,,,
+2022-06-14,,,,,,,,,,,,0.6170998890116444,,,,,
+2022-06-14,,,,,,,,,,,,,0.1414475499270746,,,,
+2022-06-14,,,,,,,,,,,,,,0.00010501970679306744,,,
+2022-06-14,,,,,,,,,,,,,,,-0.1413425302202815,,
+2022-06-14,,,,,,,,,,,,,,,,-1.4216263461527032,
+2022-06-14,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-06-09    1,962,303,820.56472  ...    4,554,633,026.04705
+2022-06-10    1,970,108,172.24240  ...    4,555,476,131.68187
+2022-06-11    1,977,943,562.89807  ...    4,556,319,393.38350
+2022-06-12    1,985,810,115.97802  ...    4,557,162,811.18085
+2022-06-13    1,993,707,955.41948  ...    4,558,006,385.10281
+
+[207 rows x 8 columns]"
+2022-06-14,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2022-07-09,,9021441789.057335,,,,,,,,,,,,,,,
+2022-07-09,,,,9072312198.057335,,,,,,,,,,,,,
+2022-07-09,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06883417
+ 0.02       0.15116583]",,,,,,,,,,,,
+2022-07-09,,,,,,"BTC Vault_collateral_usd          0.15422
+ETH Vault_collateral_usd          0.34568
+stETH Vault_collateral_usd        0.07467
+Stablecoin Vault_collateral_usd   0.05561
+Altcoin Vault_collateral_usd      0.05010
+LP Vault_collateral_usd           0.09038
+RWA Vault_collateral_usd          0.00561
+PSM Vault_collateral_usd          0.22373
+Name: 2022-07-08 00:00:00, dtype: float64",,,,,,,,,,,
+2022-07-09,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06883417243703578, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15116582756297092}",,,,,,,,,,
+2022-07-09,,,,,,,,-1.2770297208268047,,,,,,,,,
+2022-07-09,,,,,,,,,8.266877530491945,,,,,,,,
+2022-07-09,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1542229859924824, 'ETH Vault_collateral_usd': 0.3456818424454541, 'stETH Vault_collateral_usd': 0.07466895043857928, 'Stablecoin Vault_collateral_usd': 0.05560914905162743, 'Altcoin Vault_collateral_usd': 0.0501026579995718, 'LP Vault_collateral_usd': 0.09037660553512657, 'RWA Vault_collateral_usd': 0.005607215436313243, 'PSM Vault_collateral_usd': 0.2237305931008452}",,,,,,,
+2022-07-09,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06883417243703578, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15116582756297092}",,,,,,
+2022-07-09,,,,,,,,,,,,0.6117013702369556,,,,,
+2022-07-09,,,,,,,,,,,,,0.13831848144956488,,,,
+2022-07-09,,,,,,,,,,,,,,9.54390725131875e-05,,,
+2022-07-09,,,,,,,,,,,,,,,-0.15540616023603895,,
+2022-07-09,,,,,,,,,,,,,,,,-1.4325313201353567,
+2022-07-09,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-07-04    1,794,511,465.52394  ...    4,102,604,243.39701
+2022-07-05    1,785,538,908.19632  ...    4,082,091,222.18003
+2022-07-06    1,776,611,213.65534  ...    4,061,680,766.06913
+2022-07-07    1,767,728,157.58707  ...    4,041,372,362.23878
+2022-07-08    1,758,889,516.79913  ...    4,021,165,500.42759
+
+[232 rows x 8 columns]"
+2022-07-09,,,"{'stETH Vault_dai_ceiling': -0.3684012935419505, 'ETH Vault_dai_ceiling': 0.14397226807556762, 'BTC Vault_dai_ceiling': 0.1980756134318994, 'Altcoin Vault_dai_ceiling': -0.24460007501891912, 'Stablecoin Vault_dai_ceiling': -0.14052219689160328, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': -0.3808110327464699}",,,,,,,,,,,,,,
+2022-08-03,,8942990829.673523,,,,,,,,,,,,,,,
+2022-08-03,,,,8993861238.673523,,,,,,,,,,,,,
+2022-08-03,,,,,"[0.1        0.05       0.5        0.1        0.01       0.08805758
+ 0.02       0.13194242]",,,,,,,,,,,,
+2022-08-03,,,,,,"BTC Vault_collateral_usd          0.15614
+ETH Vault_collateral_usd          0.34842
+stETH Vault_collateral_usd        0.07087
+Stablecoin Vault_collateral_usd   0.05453
+Altcoin Vault_collateral_usd      0.04997
+LP Vault_collateral_usd           0.10635
+RWA Vault_collateral_usd          0.00566
+PSM Vault_collateral_usd          0.20807
+Name: 2022-08-02 00:00:00, dtype: float64",,,,,,,,,,,
+2022-08-03,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000003051, 'ETH Vault_collateral_usd': 0.05000000000006574, 'stETH Vault_collateral_usd': 0.49999999999995975, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08805757892958248, 'RWA Vault_collateral_usd': 0.0199999999999626, 'PSM Vault_collateral_usd': 0.13194242107040655}",,,,,,,,,,
+2022-08-03,,,,,,,,-1.2503798471809504,,,,,,,,,
+2022-08-03,,,,,,,,,6.019204154502846,,,,,,,,
+2022-08-03,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15613973068820794, 'ETH Vault_collateral_usd': 0.3484177373509155, 'stETH Vault_collateral_usd': 0.07086751158349208, 'Stablecoin Vault_collateral_usd': 0.054526066971381966, 'Altcoin Vault_collateral_usd': 0.049971463316358024, 'LP Vault_collateral_usd': 0.10634638933753222, 'RWA Vault_collateral_usd': 0.005656125622803442, 'PSM Vault_collateral_usd': 0.2080749751293087}",,,,,,,
+2022-08-03,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000003051, 'ETH Vault_collateral_usd': 0.05000000000006574, 'stETH Vault_collateral_usd': 0.49999999999995975, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08805757892958248, 'RWA Vault_collateral_usd': 0.0199999999999626, 'PSM Vault_collateral_usd': 0.13194242107040655}",,,,,,
+2022-08-03,,,,,,,,,,,,0.6146632317916207,,,,,
+2022-08-03,,,,,,,,,,,,,0.13970008452064045,,,,
+2022-08-03,,,,,,,,,,,,,,7.269584001683796e-05,,,
+2022-08-03,,,,,,,,,,,,,,,-0.14827468362276755,,
+2022-08-03,,,,,,,,,,,,,,,,-1.3987272266437347,
+2022-08-03,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-07-29    1,812,840,743.14885  ...    3,711,547,158.86752
+2022-07-30    1,815,450,731.08336  ...    3,697,413,177.80096
+2022-07-31    1,818,064,476.67670  ...    3,683,333,020.49367
+2022-08-01    1,820,681,985.33884  ...    3,669,306,481.97884
+2022-08-02    1,823,303,262.48758  ...    3,655,333,358.07018
+
+[257 rows x 8 columns]"
+2022-08-03,,,"{'stETH Vault_dai_ceiling': 0.22974119924919745, 'ETH Vault_dai_ceiling': -0.3588021050360033, 'BTC Vault_dai_ceiling': 0.07395406656932046, 'Altcoin Vault_dai_ceiling': -0.037785793998149964, 'Stablecoin Vault_dai_ceiling': -0.021876806559355755, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': 0.041996065493676626}",,,,,,,,,,,,,,
+2022-08-28,,8375366635.798506,,,,,,,,,,,,,,,
+2022-08-28,,,,8426237044.798506,,,,,,,,,,,,,
+2022-08-28,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0750391 0.02
+ 0.1449609]",,,,,,,,,,,,
+2022-08-28,,,,,,"BTC Vault_collateral_usd          0.15635
+ETH Vault_collateral_usd          0.33842
+stETH Vault_collateral_usd        0.08417
+Stablecoin Vault_collateral_usd   0.05769
+Altcoin Vault_collateral_usd      0.05650
+LP Vault_collateral_usd           0.09058
+RWA Vault_collateral_usd          0.00604
+PSM Vault_collateral_usd          0.21024
+Name: 2022-08-27 00:00:00, dtype: float64",,,,,,,,,,,
+2022-08-28,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.0500000000000019, 'stETH Vault_collateral_usd': 0.4999999999999986, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000001376, 'LP Vault_collateral_usd': 0.07503910163607887, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1449608983639176}",,,,,,,,,,
+2022-08-28,,,,,,,,-1.2945301215012337,,,,,,,,,
+2022-08-28,,,,,,,,,5.158173581176138,,,,,,,,
+2022-08-28,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1563549640464888, 'ETH Vault_collateral_usd': 0.33842452332648365, 'stETH Vault_collateral_usd': 0.08417055169748769, 'Stablecoin Vault_collateral_usd': 0.05769131223341014, 'Altcoin Vault_collateral_usd': 0.05649964987021673, 'LP Vault_collateral_usd': 0.09058059456408094, 'RWA Vault_collateral_usd': 0.006037144306473337, 'PSM Vault_collateral_usd': 0.21024125995535872}",,,,,,,
+2022-08-28,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.0500000000000019, 'stETH Vault_collateral_usd': 0.4999999999999986, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000001376, 'LP Vault_collateral_usd': 0.07503910163607887, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1449608983639176}",,,,,,
+2022-08-28,,,,,,,,,,,,0.5894978393686202,,,,,
+2022-08-28,,,,,,,,,,,,,0.1348859976464652,,,,
+2022-08-28,,,,,,,,,,,,,,6.452703702677372e-05,,,
+2022-08-28,,,,,,,,,,,,,,,-0.1979338734819931,,
+2022-08-28,,,,,,,,,,,,,,,,-1.4925285220202535,
+2022-08-28,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-08-23    1,690,739,307.30605  ...    3,687,706,121.64894
+2022-08-24    1,684,672,899.08076  ...    3,689,254,813.12701
+2022-08-25    1,678,628,257.25589  ...    3,690,804,154.99455
+2022-08-26    1,672,605,303.73313  ...    3,692,354,147.52473
+2022-08-27    1,666,603,960.69439  ...    3,693,904,790.99078
+
+[282 rows x 8 columns]"
+2022-08-28,,,"{'stETH Vault_dai_ceiling': -0.4379600351182408, 'ETH Vault_dai_ceiling': -0.376404289956356, 'BTC Vault_dai_ceiling': 0.20816729046844817, 'Altcoin Vault_dai_ceiling': -0.16084181808098613, 'Stablecoin Vault_dai_ceiling': 0.1399715359470426, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': -0.17482413218413284}",,,,,,,,,,,,,,
+2022-09-22,,8525728532.854551,,,,,,,,,,,,,,,
+2022-09-22,,,,8576598941.854553,,,,,,,,,,,,,
+2022-09-22,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0930812 0.02
+ 0.1269188]",,,,,,,,,,,,
+2022-09-22,,,,,,"BTC Vault_collateral_usd          0.16754
+ETH Vault_collateral_usd          0.32502
+stETH Vault_collateral_usd        0.07864
+Stablecoin Vault_collateral_usd   0.05698
+Altcoin Vault_collateral_usd      0.05258
+LP Vault_collateral_usd           0.10234
+RWA Vault_collateral_usd          0.00593
+PSM Vault_collateral_usd          0.21097
+Name: 2022-09-21 00:00:00, dtype: float64",,,,,,,,,,,
+2022-09-22,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.050000000000005006, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.09308119853785325, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.12691880146214388}",,,,,,,,,,
+2022-09-22,,,,,,,,-1.212569468942609,,,,,,,,,
+2022-09-22,,,,,,,,,4.373078227908357,,,,,,,,
+2022-09-22,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.16754483676684379, 'ETH Vault_collateral_usd': 0.3250245605008048, 'stETH Vault_collateral_usd': 0.07863515163096435, 'Stablecoin Vault_collateral_usd': 0.056982585414261204, 'Altcoin Vault_collateral_usd': 0.0525754075319795, 'LP Vault_collateral_usd': 0.10233625880877147, 'RWA Vault_collateral_usd': 0.00593130322927285, 'PSM Vault_collateral_usd': 0.210969896117102}",,,,,,,
+2022-09-22,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.050000000000005006, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.09308119853785325, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.12691880146214388}",,,,,,
+2022-09-22,,,,,,,,,,,,0.6133741141645436,,,,,
+2022-09-22,,,,,,,,,,,,,0.13670027420728592,,,,
+2022-09-22,,,,,,,,,,,,,,5.585647696850966e-05,,,
+2022-09-22,,,,,,,,,,,,,,,-0.11879992839817057,,
+2022-09-22,,,,,,,,,,,,,,,,-1.3314252538177482,
+2022-09-22,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-09-17    1,539,709,804.48830  ...    3,560,635,038.73574
+2022-09-18    1,533,914,270.73132  ...    3,554,410,189.42902
+2022-09-19    1,528,140,551.61204  ...    3,548,196,222.66109
+2022-09-20    1,522,388,565.01921  ...    3,541,993,119.40663
+2022-09-21    1,516,658,229.15067  ...    3,535,800,860.67361
+
+[307 rows x 8 columns]"
+2022-09-22,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2022-10-17,,8592632603.278547,,,,,,,,,,,,,,,
+2022-10-17,,,,8643503012.278547,,,,,,,,,,,,,
+2022-10-17,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0863541 0.02
+ 0.1336459]",,,,,,,,,,,,
+2022-10-17,,,,,,"BTC Vault_collateral_usd          0.16248
+ETH Vault_collateral_usd          0.31675
+stETH Vault_collateral_usd        0.08651
+Stablecoin Vault_collateral_usd   0.05232
+Altcoin Vault_collateral_usd      0.05085
+LP Vault_collateral_usd           0.09962
+RWA Vault_collateral_usd          0.00589
+PSM Vault_collateral_usd          0.22557
+Name: 2022-10-16 00:00:00, dtype: float64",,,,,,,,,,,
+2022-10-17,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08635409552899903, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1336459044709999}",,,,,,,,,,
+2022-10-17,,,,,,,,-1.15707577231411,,,,,,,,,
+2022-10-17,,,,,,,,,4.269620102661609,,,,,,,,
+2022-10-17,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.16248420229343763, 'ETH Vault_collateral_usd': 0.31675226151203245, 'stETH Vault_collateral_usd': 0.08651331420234529, 'Stablecoin Vault_collateral_usd': 0.0523231957117774, 'Altcoin Vault_collateral_usd': 0.05085234480929558, 'LP Vault_collateral_usd': 0.09962039128960098, 'RWA Vault_collateral_usd': 0.005885392638579051, 'PSM Vault_collateral_usd': 0.22556889754293166}",,,,,,,
+2022-10-17,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08635409552899903, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1336459044709999}",,,,,,
+2022-10-17,,,,,,,,,,,,0.6270961514240014,,,,,
+2022-10-17,,,,,,,,,,,,,0.13579374212779965,,,,
+2022-10-17,,,,,,,,,,,,,,5.426695874975719e-05,,,
+2022-10-17,,,,,,,,,,,,,,,-0.12793870578743685,,
+2022-10-17,,,,,,,,,,,,,,,,-1.2850687450602967,
+2022-10-17,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-10-12    1,365,125,004.43902  ...    3,182,529,902.15571
+2022-10-13    1,358,299,379.41682  ...    3,166,617,252.64493
+2022-10-14    1,351,507,882.51974  ...    3,150,784,166.38171
+2022-10-15    1,344,750,343.10714  ...    3,135,030,245.54980
+2022-10-16    1,338,026,591.39160  ...    3,119,355,094.32205
+
+[332 rows x 8 columns]"
+2022-10-17,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2022-11-11,,8646285723.449821,,,,,,,,,,,,,,,
+2022-11-11,,,,8697156132.449821,,,,,,,,,,,,,
+2022-11-11,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0824844 0.02
+ 0.1375156]",,,,,,,,,,,,
+2022-11-11,,,,,,"BTC Vault_collateral_usd          0.16242
+ETH Vault_collateral_usd          0.29796
+stETH Vault_collateral_usd        0.09788
+Stablecoin Vault_collateral_usd   0.05306
+Altcoin Vault_collateral_usd      0.04750
+LP Vault_collateral_usd           0.10392
+RWA Vault_collateral_usd          0.00585
+PSM Vault_collateral_usd          0.23141
+Name: 2022-11-10 00:00:00, dtype: float64",,,,,,,,,,,
+2022-11-11,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000001143, 'ETH Vault_collateral_usd': 0.05000000000001695, 'stETH Vault_collateral_usd': 0.49999999999999123, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08248439629337663, 'RWA Vault_collateral_usd': 0.0199999999999845, 'PSM Vault_collateral_usd': 0.13751560370662286}",,,,,,,,,,
+2022-11-11,,,,,,,,-1.061688491952006,,,,,,,,,
+2022-11-11,,,,,,,,,4.263727446989661,,,,,,,,
+2022-11-11,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.16241879174762555, 'ETH Vault_collateral_usd': 0.2979632470064543, 'stETH Vault_collateral_usd': 0.09788054793216175, 'Stablecoin Vault_collateral_usd': 0.053058599837936024, 'Altcoin Vault_collateral_usd': 0.04750130761195453, 'LP Vault_collateral_usd': 0.10392258506034477, 'RWA Vault_collateral_usd': 0.005849085405078361, 'PSM Vault_collateral_usd': 0.23140583539844467}",,,,,,,
+2022-11-11,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000001143, 'ETH Vault_collateral_usd': 0.05000000000001695, 'stETH Vault_collateral_usd': 0.49999999999999123, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08248439629337663, 'RWA Vault_collateral_usd': 0.0199999999999845, 'PSM Vault_collateral_usd': 0.13751560370662286}",,,,,,
+2022-11-11,,,,,,,,,,,,0.6547136334905397,,,,,
+2022-11-11,,,,,,,,,,,,,0.13234621909279942,,,,
+2022-11-11,,,,,,,,,,,,,,5.325415938941667e-05,,,
+2022-11-11,,,,,,,,,,,,,,,-0.12608562977137475,,
+2022-11-11,,,,,,,,,,,,,,,,-1.1878273758827702,
+2022-11-11,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-11-06    1,204,340,913.07167  ...    2,807,692,303.47164
+2022-11-07    1,198,319,208.50631  ...    2,793,653,841.95428
+2022-11-08    1,192,327,612.46378  ...    2,779,685,572.74451
+2022-11-09    1,186,365,974.40146  ...    2,765,787,144.88078
+2022-11-10    1,180,434,144.52946  ...    2,751,958,209.15638
+
+[357 rows x 8 columns]"
+2022-11-11,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2022-12-06,,8738763063.187248,,,,,,,,,,,,,,,
+2022-12-06,,,,8789633472.187248,,,,,,,,,,,,,
+2022-12-06,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0709698 0.02
+ 0.1490302]",,,,,,,,,,,,
+2022-12-06,,,,,,"BTC Vault_collateral_usd          0.16144
+ETH Vault_collateral_usd          0.29206
+stETH Vault_collateral_usd        0.10948
+Stablecoin Vault_collateral_usd   0.04841
+Altcoin Vault_collateral_usd      0.04754
+LP Vault_collateral_usd           0.09196
+RWA Vault_collateral_usd          0.00579
+PSM Vault_collateral_usd          0.24332
+Name: 2022-12-05 00:00:00, dtype: float64",,,,,,,,,,,
+2022-12-06,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000192, 'ETH Vault_collateral_usd': 0.05000000000001019, 'stETH Vault_collateral_usd': 0.4999999999999957, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000163, 'LP Vault_collateral_usd': 0.07096980301279789, 'RWA Vault_collateral_usd': 0.019999999999993488, 'PSM Vault_collateral_usd': 0.14903019698720066}",,,,,,,,,,
+2022-12-06,,,,,,,,-0.9652446904198005,,,,,,,,,
+2022-12-06,,,,,,,,,4.207830162867307,,,,,,,,
+2022-12-06,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1614420610955401, 'ETH Vault_collateral_usd': 0.29206138717938124, 'stETH Vault_collateral_usd': 0.10947916115277262, 'Stablecoin Vault_collateral_usd': 0.048414720999267115, 'Altcoin Vault_collateral_usd': 0.0475383945466056, 'LP Vault_collateral_usd': 0.09195612428502721, 'RWA Vault_collateral_usd': 0.005787546108830089, 'PSM Vault_collateral_usd': 0.243320604632576}",,,,,,,
+2022-12-06,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000192, 'ETH Vault_collateral_usd': 0.05000000000001019, 'stETH Vault_collateral_usd': 0.4999999999999957, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000163, 'LP Vault_collateral_usd': 0.07096980301279789, 'RWA Vault_collateral_usd': 0.019999999999993488, 'PSM Vault_collateral_usd': 0.14903019698720066}",,,,,,
+2022-12-06,,,,,,,,,,,,0.6841594476017004,,,,,
+2022-12-06,,,,,,,,,,,,,0.13037673478260553,,,,
+2022-12-06,,,,,,,,,,,,,,5.173074853287107e-05,,,
+2022-12-06,,,,,,,,,,,,,,,-0.11969194900676482,,
+2022-12-06,,,,,,,,,,,,,,,,-1.0849883701750982,
+2022-12-06,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-12-01    1,062,493,932.92327  ...    2,477,002,986.09422
+2022-12-02    1,057,181,463.25866  ...    2,464,617,971.16375
+2022-12-03    1,051,895,555.94236  ...    2,452,294,881.30794
+2022-12-04    1,046,636,078.16265  ...    2,440,033,406.90140
+2022-12-05    1,041,402,897.77184  ...    2,427,833,239.86689
+
+[382 rows x 8 columns]"
+2022-12-06,,,"{'stETH Vault_dai_ceiling': -0.29981806239401176, 'ETH Vault_dai_ceiling': 0.14960518760926522, 'BTC Vault_dai_ceiling': 0.17320307496585274, 'Altcoin Vault_dai_ceiling': 0.15002623588475456, 'Stablecoin Vault_dai_ceiling': -0.06521269549253467, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': -0.48031510070347616}",,,,,,,,,,,,,,
+2022-12-31,,8992882440.865765,,,,,,,,,,,,,,,
+2022-12-31,,,,9043752849.865765,,,,,,,,,,,,,
+2022-12-31,,,,,"[0.1        0.05       0.5        0.1        0.01       0.07700326
+ 0.02       0.14299674]",,,,,,,,,,,,
+2022-12-31,,,,,,"BTC Vault_collateral_usd          0.16403
+ETH Vault_collateral_usd          0.30323
+stETH Vault_collateral_usd        0.10375
+Stablecoin Vault_collateral_usd   0.04522
+Altcoin Vault_collateral_usd      0.04523
+LP Vault_collateral_usd           0.09689
+RWA Vault_collateral_usd          0.00562
+PSM Vault_collateral_usd          0.23602
+Name: 2022-12-30 00:00:00, dtype: float64",,,,,,,,,,,
+2022-12-31,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000883, 'LP Vault_collateral_usd': 0.07700325919783249, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.14299674080216748}",,,,,,,,,,
+2022-12-31,,,,,,,,-0.8571086664400375,,,,,,,,,
+2022-12-31,,,,,,,,,3.8140751699975914,,,,,,,,
+2022-12-31,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1640262531922216, 'ETH Vault_collateral_usd': 0.30323359271896433, 'stETH Vault_collateral_usd': 0.10374949820594129, 'Stablecoin Vault_collateral_usd': 0.04522380924482411, 'Altcoin Vault_collateral_usd': 0.04523277874419946, 'LP Vault_collateral_usd': 0.09688929775654859, 'RWA Vault_collateral_usd': 0.005624922512201898, 'PSM Vault_collateral_usd': 0.2360198476250987}",,,,,,,
+2022-12-31,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000883, 'LP Vault_collateral_usd': 0.07700325919783249, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.14299674080216748}",,,,,,
+2022-12-31,,,,,,,,,,,,0.71949028280378,,,,,
+2022-12-31,,,,,,,,,,,,,0.13297193429629497,,,,
+2022-12-31,,,,,,,,,,,,,,4.671183836437629e-05,,,
+2022-12-31,,,,,,,,,,,,,,,-0.1040139625649421,,
+2022-12-31,,,,,,,,,,,,,,,,-0.9611693408433439,
+2022-12-31,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2022-12-26    1,074,614,890.85295  ...    2,194,359,054.52713
+2022-12-27    1,076,222,570.47649  ...    2,183,819,216.62458
+2022-12-28    1,077,832,655.27215  ...    2,173,330,003.15507
+2022-12-29    1,079,445,148.83818  ...    2,162,891,170.96180
+2022-12-30    1,081,060,054.77824  ...    2,152,502,478.05589
+
+[407 rows x 8 columns]"
+2022-12-31,,,"{'stETH Vault_dai_ceiling': 0.47642700300361585, 'ETH Vault_dai_ceiling': 0.3727373844762061, 'BTC Vault_dai_ceiling': 0.14541962672095288, 'Altcoin Vault_dai_ceiling': 0.19471469956827897, 'Stablecoin Vault_dai_ceiling': 0.13966278488230116, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': 0.32526028186372924}",,,,,,,,,,,,,,
+2023-01-25,,9356820120.564322,,,,,,,,,,,,,,,
+2023-01-25,,,,9407690529.564323,,,,,,,,,,,,,
+2023-01-25,,,,,"[0.1        0.05       0.5        0.1        0.01       0.08063944
+ 0.02       0.13936056]",,,,,,,,,,,,
+2023-01-25,,,,,,"BTC Vault_collateral_usd          0.16434
+ETH Vault_collateral_usd          0.30711
+stETH Vault_collateral_usd        0.10320
+Stablecoin Vault_collateral_usd   0.04483
+Altcoin Vault_collateral_usd      0.04672
+LP Vault_collateral_usd           0.10067
+RWA Vault_collateral_usd          0.00541
+PSM Vault_collateral_usd          0.22773
+Name: 2023-01-24 00:00:00, dtype: float64",,,,,,,,,,,
+2023-01-25,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000174, 'ETH Vault_collateral_usd': 0.05000000000000293, 'stETH Vault_collateral_usd': 0.49999999999999833, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08063944314692785, 'RWA Vault_collateral_usd': 0.01999999999999631, 'PSM Vault_collateral_usd': 0.13936055685307447}",,,,,,,,,,
+2023-01-25,,,,,,,,-0.696549678416089,,,,,,,,,
+2023-01-25,,,,,,,,,3.6340880920073744,,,,,,,,
+2023-01-25,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.16434269802475943, 'ETH Vault_collateral_usd': 0.30710750235368556, 'stETH Vault_collateral_usd': 0.10319516039380762, 'Stablecoin Vault_collateral_usd': 0.044828042797772964, 'Altcoin Vault_collateral_usd': 0.046717778460730074, 'LP Vault_collateral_usd': 0.10067473432252061, 'RWA Vault_collateral_usd': 0.005407321684332218, 'PSM Vault_collateral_usd': 0.22772676196239142}",,,,,,,
+2023-01-25,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000174, 'ETH Vault_collateral_usd': 0.05000000000000293, 'stETH Vault_collateral_usd': 0.49999999999999833, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08063944314692785, 'RWA Vault_collateral_usd': 0.01999999999999631, 'PSM Vault_collateral_usd': 0.13936055685307447}",,,,,,
+2023-01-25,,,,,,,,,,,,0.7772888095672517,,,,,
+2023-01-25,,,,,,,,,,,,,0.13330556432116603,,,,
+2023-01-25,,,,,,,,,,,,,,4.330637770423463e-05,,,
+2023-01-25,,,,,,,,,,,,,,,-0.09302037100335589,,
+2023-01-25,,,,,,,,,,,,,,,,-0.7896133557971491,
+2023-01-25,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-01-20    1,168,909,688.73886  ...    2,304,410,566.17050
+2023-01-21    1,173,266,652.13956  ...    2,311,905,898.47332
+2023-01-22    1,177,639,855.57167  ...    2,319,425,610.11512
+2023-01-23    1,182,029,359.56788  ...    2,326,969,780.39220
+2023-01-24    1,186,435,224.88647  ...    2,334,538,488.85879
+
+[432 rows x 8 columns]"
+2023-01-25,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-02-19,,8679776688.527367,,,,,,,,,,,,,,,
+2023-02-19,,,,8730647097.527367,,,,,,,,,,,,,
+2023-02-19,,,,,"[0.1        0.05       0.5        0.1        0.01       0.08900715
+ 0.02       0.13099285]",,,,,,,,,,,,
+2023-02-19,,,,,,"BTC Vault_collateral_usd          0.15818
+ETH Vault_collateral_usd          0.29352
+stETH Vault_collateral_usd        0.10611
+Stablecoin Vault_collateral_usd   0.04762
+Altcoin Vault_collateral_usd      0.04621
+LP Vault_collateral_usd           0.11379
+RWA Vault_collateral_usd          0.00583
+PSM Vault_collateral_usd          0.22875
+Name: 2023-02-18 00:00:00, dtype: float64",,,,,,,,,,,
+2023-02-19,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000005326, 'LP Vault_collateral_usd': 0.08900714709399088, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.13099285290600948}",,,,,,,,,,
+2023-02-19,,,,,,,,-0.7783769043707158,,,,,,,,,
+2023-02-19,,,,,,,,,3.106658933480141,,,,,,,,
+2023-02-19,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15817673688273565, 'ETH Vault_collateral_usd': 0.2935152923250229, 'stETH Vault_collateral_usd': 0.1061060880901546, 'Stablecoin Vault_collateral_usd': 0.04761584720070779, 'Altcoin Vault_collateral_usd': 0.04621197070968472, 'LP Vault_collateral_usd': 0.11379394061341866, 'RWA Vault_collateral_usd': 0.005826648177591233, 'PSM Vault_collateral_usd': 0.2287534760006843}",,,,,,,
+2023-02-19,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000005326, 'LP Vault_collateral_usd': 0.08900714709399088, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.13099285290600948}",,,,,,
+2023-02-19,,,,,,,,,,,,0.739616115458674,,,,,
+2023-02-19,,,,,,,,,,,,,0.13155754758044108,,,,
+2023-02-19,,,,,,,,,,,,,,3.8850358378508567e-05,,,
+2023-02-19,,,,,,,,,,,,,,,-0.20348571504745772,,
+2023-02-19,,,,,,,,,,,,,,,,-0.9819014697765521,
+2023-02-19,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-02-14    1,067,895,429.90628  ...    2,101,288,743.70800
+2023-02-15    1,062,555,952.75675  ...    2,090,782,299.98946
+2023-02-16    1,057,243,172.99297  ...    2,080,328,388.48951
+2023-02-17    1,051,956,957.12800  ...    2,069,926,746.54706
+2023-02-18    1,046,697,172.34236  ...    2,059,577,112.81433
+
+[457 rows x 8 columns]"
+2023-02-19,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-03-16,,8999053305.620926,,,,,,,,,,,,,,,
+2023-03-16,,,,9049923714.620928,,,,,,,,,,,,,
+2023-03-16,,,,,"[0.1        0.05       0.5        0.1        0.01       0.08234736
+ 0.02       0.13765264]",,,,,,,,,,,,
+2023-03-16,,,,,,"BTC Vault_collateral_usd          0.15662
+ETH Vault_collateral_usd          0.28163
+stETH Vault_collateral_usd        0.11078
+Stablecoin Vault_collateral_usd   0.04541
+Altcoin Vault_collateral_usd      0.04410
+LP Vault_collateral_usd           0.11700
+RWA Vault_collateral_usd          0.00562
+PSM Vault_collateral_usd          0.23883
+Name: 2023-03-15 00:00:00, dtype: float64",,,,,,,,,,,
+2023-03-16,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000268, 'ETH Vault_collateral_usd': 0.05000000000000657, 'stETH Vault_collateral_usd': 0.49999999999999584, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08234735697857494, 'RWA Vault_collateral_usd': 0.019999999999995743, 'PSM Vault_collateral_usd': 0.137652643021425}",,,,,,,,,,
+2023-03-16,,,,,,,,-0.6626224388804185,,,,,,,,,
+2023-03-16,,,,,,,,,3.115277607762011,,,,,,,,
+2023-03-16,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15662179536624563, 'ETH Vault_collateral_usd': 0.28162851070008954, 'stETH Vault_collateral_usd': 0.11078040706379821, 'Stablecoin Vault_collateral_usd': 0.04541445745676607, 'Altcoin Vault_collateral_usd': 0.04410307363596067, 'LP Vault_collateral_usd': 0.1169980346790568, 'RWA Vault_collateral_usd': 0.005621087050470327, 'PSM Vault_collateral_usd': 0.23883263404761274}",,,,,,,
+2023-03-16,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000268, 'ETH Vault_collateral_usd': 0.05000000000000657, 'stETH Vault_collateral_usd': 0.49999999999999584, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.08234735697857494, 'RWA Vault_collateral_usd': 0.019999999999995743, 'PSM Vault_collateral_usd': 0.137652643021425}",,,,,,
+2023-03-16,,,,,,,,,,,,0.7822031380905152,,,,,
+2023-03-16,,,,,,,,,,,,,0.13090972812255902,,,,
+2023-03-16,,,,,,,,,,,,,,3.7779000466424295e-05,,,
+2023-03-16,,,,,,,,,,,,,,,-0.09430230960659959,,
+2023-03-16,,,,,,,,,,,,,,,,-0.7569625274874846,
+2023-03-16,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-03-11      942,118,965.61583  ...    1,853,799,465.97965
+2023-03-12      937,408,370.78775  ...    1,844,530,468.64975
+2023-03-13      932,721,328.93382  ...    1,835,307,816.30651
+2023-03-14      928,057,722.28915  ...    1,826,131,277.22497
+2023-03-15      923,417,433.67770  ...    1,817,000,620.83885
+
+[482 rows x 8 columns]"
+2023-03-16,,,"{'stETH Vault_dai_ceiling': 0.30591748452533685, 'ETH Vault_dai_ceiling': 0.22593658140592132, 'BTC Vault_dai_ceiling': -0.21619213295519302, 'Altcoin Vault_dai_ceiling': 0.15650825869754792, 'Stablecoin Vault_dai_ceiling': 0.028643293056222874, 'LP Vault_dai_ceiling': 0.0, 'RWA Vault_dai_ceiling': 0.0, 'PSM Vault_dai_ceiling': -0.41170213785875}",,,,,,,,,,,,,,
+2023-04-10,,8868209897.26196,,,,,,,,,,,,,,,
+2023-04-10,,,,8919080306.26196,,,,,,,,,,,,,
+2023-04-10,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06914867
+ 0.02       0.15085133]",,,,,,,,,,,,
+2023-04-10,,,,,,"BTC Vault_collateral_usd          0.16176
+ETH Vault_collateral_usd          0.29677
+stETH Vault_collateral_usd        0.11512
+Stablecoin Vault_collateral_usd   0.04184
+Altcoin Vault_collateral_usd      0.04681
+LP Vault_collateral_usd           0.09132
+RWA Vault_collateral_usd          0.00570
+PSM Vault_collateral_usd          0.24068
+Name: 2023-04-09 00:00:00, dtype: float64",,,,,,,,,,,
+2023-04-10,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000213, 'ETH Vault_collateral_usd': 0.05000000000000323, 'stETH Vault_collateral_usd': 0.49999999999999833, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06914867268983751, 'RWA Vault_collateral_usd': 0.019999999999997676, 'PSM Vault_collateral_usd': 0.1508513273101619}",,,,,,,,,,
+2023-04-10,,,,,,,,-0.6152014139711964,,,,,,,,,
+2023-04-10,,,,,,,,,2.8805657175228516,,,,,,,,
+2023-04-10,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.16176345772836434, 'ETH Vault_collateral_usd': 0.29676727647750917, 'stETH Vault_collateral_usd': 0.11511529612484302, 'Stablecoin Vault_collateral_usd': 0.04183529188788597, 'Altcoin Vault_collateral_usd': 0.04680574820660112, 'LP Vault_collateral_usd': 0.09132458897257897, 'RWA Vault_collateral_usd': 0.00570354871278428, 'PSM Vault_collateral_usd': 0.24068479188943318}",,,,,,,
+2023-04-10,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000213, 'ETH Vault_collateral_usd': 0.05000000000000323, 'stETH Vault_collateral_usd': 0.49999999999999833, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06914867268983751, 'RWA Vault_collateral_usd': 0.019999999999997676, 'PSM Vault_collateral_usd': 0.1508513273101619}",,,,,,
+2023-04-10,,,,,,,,,,,,0.797854326880964,,,,,
+2023-04-10,,,,,,,,,,,,,0.1306702466498521,,,,
+2023-04-10,,,,,,,,,,,,,,3.4957671314940477e-05,,,
+2023-04-10,,,,,,,,,,,,,,,-0.1450932460271231,,
+2023-04-10,,,,,,,,,,,,,,,,-0.7603296176696345,
+2023-04-10,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-04-05      968,234,735.04248  ...    1,666,209,387.41657
+2023-04-06      970,422,331.50282  ...    1,659,349,567.74737
+2023-04-07      972,614,870.54382  ...    1,652,517,990.10241
+2023-04-08      974,812,363.33257  ...    1,645,714,538.20865
+2023-04-09      977,014,821.06140  ...    1,638,939,096.27180
+
+[507 rows x 8 columns]"
+2023-04-10,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-05-05,,8866674066.053696,,,,,,,,,,,,,,,
+2023-05-05,,,,8917544475.053696,,,,,,,,,,,,,
+2023-05-05,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06881002
+ 0.02       0.15118998]",,,,,,,,,,,,
+2023-05-05,,,,,,"BTC Vault_collateral_usd          0.15797
+ETH Vault_collateral_usd          0.28296
+stETH Vault_collateral_usd        0.12744
+Stablecoin Vault_collateral_usd   0.04177
+Altcoin Vault_collateral_usd      0.04688
+LP Vault_collateral_usd           0.09543
+RWA Vault_collateral_usd          0.00570
+PSM Vault_collateral_usd          0.24185
+Name: 2023-05-04 00:00:00, dtype: float64",,,,,,,,,,,
+2023-05-05,,,,,,,"{'BTC Vault_collateral_usd': 0.1000000000000024, 'ETH Vault_collateral_usd': 0.050000000000005415, 'stETH Vault_collateral_usd': 0.49999999999999795, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0688100194156526, 'RWA Vault_collateral_usd': 0.019999999999995514, 'PSM Vault_collateral_usd': 0.15118998058434663}",,,,,,,,,,
+2023-05-05,,,,,,,,-0.5643145727507111,,,,,,,,,
+2023-05-05,,,,,,,,,2.8903579384528038,,,,,,,,
+2023-05-05,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15796840712710056, 'ETH Vault_collateral_usd': 0.2829587285485262, 'stETH Vault_collateral_usd': 0.12743751223968314, 'Stablecoin Vault_collateral_usd': 0.04176783442475015, 'Altcoin Vault_collateral_usd': 0.04687530948052653, 'LP Vault_collateral_usd': 0.09543308824597753, 'RWA Vault_collateral_usd': 0.005704531011009475, 'PSM Vault_collateral_usd': 0.24185458892242626}",,,,,,,
+2023-05-05,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1000000000000024, 'ETH Vault_collateral_usd': 0.050000000000005415, 'stETH Vault_collateral_usd': 0.49999999999999795, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0688100194156526, 'RWA Vault_collateral_usd': 0.019999999999995514, 'PSM Vault_collateral_usd': 0.15118998058434663}",,,,,,
+2023-05-05,,,,,,,,,,,,0.8167499733289104,,,,,
+2023-05-05,,,,,,,,,,,,,0.127168606378443,,,,
+2023-05-05,,,,,,,,,,,,,,3.4546725112035145e-05,,,
+2023-05-05,,,,,,,,,,,,,,,-0.12730625579413543,,
+2023-05-05,,,,,,,,,,,,,,,,-0.6916553752699585,
+2023-05-05,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-04-30      879,398,757.28320  ...    1,475,188,475.60418
+2023-05-01      875,001,763.49678  ...    1,467,812,533.22616
+2023-05-02      870,626,754.67930  ...    1,460,473,470.56003
+2023-05-03      866,273,620.90590  ...    1,453,171,103.20723
+2023-05-04      861,942,252.80137  ...    1,445,905,247.69119
+
+[532 rows x 8 columns]"
+2023-05-05,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-05-30,,9258230236.67272,,,,,,,,,,,,,,,
+2023-05-30,,,,9309100645.67272,,,,,,,,,,,,,
+2023-05-30,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06650486
+ 0.02       0.15349514]",,,,,,,,,,,,
+2023-05-30,,,,,,"BTC Vault_collateral_usd          0.15685
+ETH Vault_collateral_usd          0.27631
+stETH Vault_collateral_usd        0.12765
+Stablecoin Vault_collateral_usd   0.03881
+Altcoin Vault_collateral_usd      0.04250
+LP Vault_collateral_usd           0.10064
+RWA Vault_collateral_usd          0.00546
+PSM Vault_collateral_usd          0.25178
+Name: 2023-05-29 00:00:00, dtype: float64",,,,,,,,,,,
+2023-05-30,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000003, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.4999999999999992, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000108, 'LP Vault_collateral_usd': 0.06650485661149105, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15349514338850992}",,,,,,,,,,
+2023-05-30,,,,,,,,-0.43788518379275754,,,,,,,,,
+2023-05-30,,,,,,,,,2.8778244203672507,,,,,,,,
+2023-05-30,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1568461734632135, 'ETH Vault_collateral_usd': 0.27630707218017986, 'stETH Vault_collateral_usd': 0.12764734204611664, 'Stablecoin Vault_collateral_usd': 0.03881415925222541, 'Altcoin Vault_collateral_usd': 0.042501219341445254, 'LP Vault_collateral_usd': 0.1006436611898148, 'RWA Vault_collateral_usd': 0.005464589001263707, 'PSM Vault_collateral_usd': 0.2517757835257408}",,,,,,,
+2023-05-30,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000003, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.4999999999999992, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000108, 'LP Vault_collateral_usd': 0.06650485661149105, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15349514338850992}",,,,,,
+2023-05-30,,,,,,,,,,,,0.8708073586835029,,,,,
+2023-05-30,,,,,,,,,,,,,0.12802111705725522,,,,
+2023-05-30,,,,,,,,,,,,,,3.315709604160008e-05,,,
+2023-05-30,,,,,,,,,,,,,,,-0.08407944100575682,,
+2023-05-30,,,,,,,,,,,,,,,,-0.5219977818945559,
+2023-05-30,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-05-25      775,823,385.29926  ...    1,301,441,135.34279
+2023-05-26      771,944,268.37276  ...    1,294,933,929.66608
+2023-05-27      768,084,547.03090  ...    1,288,459,260.01775
+2023-05-28      764,244,124.29574  ...    1,282,016,963.71766
+2023-05-29      760,422,903.67426  ...    1,275,606,878.89907
+
+[557 rows x 8 columns]"
+2023-05-30,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-06-24,,9142449101.53471,,,,,,,,,,,,,,,
+2023-06-24,,,,9193319510.53471,,,,,,,,,,,,,
+2023-06-24,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06769569
+ 0.02       0.15230431]",,,,,,,,,,,,
+2023-06-24,,,,,,"BTC Vault_collateral_usd          0.15701
+ETH Vault_collateral_usd          0.26624
+stETH Vault_collateral_usd        0.13445
+Stablecoin Vault_collateral_usd   0.03889
+Altcoin Vault_collateral_usd      0.04238
+LP Vault_collateral_usd           0.10178
+RWA Vault_collateral_usd          0.00553
+PSM Vault_collateral_usd          0.25372
+Name: 2023-06-23 00:00:00, dtype: float64",,,,,,,,,,,
+2023-06-24,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000284, 'ETH Vault_collateral_usd': 0.050000000000010696, 'stETH Vault_collateral_usd': 0.499999999999998, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0676956894461741, 'RWA Vault_collateral_usd': 0.019999999999994193, 'PSM Vault_collateral_usd': 0.15230431055382235}",,,,,,,,,,
+2023-06-24,,,,,,,,-0.4292508078789351,,,,,,,,,
+2023-06-24,,,,,,,,,2.7636082467088023,,,,,,,,
+2023-06-24,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15700640969625465, 'ETH Vault_collateral_usd': 0.2662378931091095, 'stETH Vault_collateral_usd': 0.13445290872409085, 'Stablecoin Vault_collateral_usd': 0.03889201090320899, 'Altcoin Vault_collateral_usd': 0.042378575764708964, 'LP Vault_collateral_usd': 0.10178194411341053, 'RWA Vault_collateral_usd': 0.005533410314055455, 'PSM Vault_collateral_usd': 0.253716847375161}",,,,,,,
+2023-06-24,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000284, 'ETH Vault_collateral_usd': 0.050000000000010696, 'stETH Vault_collateral_usd': 0.499999999999998, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.0676956894461741, 'RWA Vault_collateral_usd': 0.019999999999994193, 'PSM Vault_collateral_usd': 0.15230431055382235}",,,,,,
+2023-06-24,,,,,,,,,,,,0.8734049443218465,,,,,
+2023-06-24,,,,,,,,,,,,,0.126034762873896,,,,
+2023-06-24,,,,,,,,,,,,,,3.192859054587737e-05,,,
+2023-06-24,,,,,,,,,,,,,,,-0.1384402479009406,,
+2023-06-24,,,,,,,,,,,,,,,,-0.5677229843704216,
+2023-06-24,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-06-19      684,447,095.46407  ...    1,148,157,714.60568
+2023-06-20      681,024,859.98675  ...    1,142,416,926.03265
+2023-06-21      677,619,735.68682  ...    1,136,704,841.40249
+2023-06-22      674,231,637.00838  ...    1,131,021,317.19548
+2023-06-23      670,860,478.82334  ...    1,125,366,210.60950
+
+[582 rows x 8 columns]"
+2023-06-24,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-07-19,,9282389590.181526,,,,,,,,,,,,,,,
+2023-07-19,,,,9333259999.181526,,,,,,,,,,,,,
+2023-07-19,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06879685
+ 0.01882479 0.15237835]",,,,,,,,,,,,
+2023-07-19,,,,,,"BTC Vault_collateral_usd          0.15115
+ETH Vault_collateral_usd          0.25542
+stETH Vault_collateral_usd        0.14588
+Stablecoin Vault_collateral_usd   0.03682
+Altcoin Vault_collateral_usd      0.04055
+LP Vault_collateral_usd           0.11011
+RWA Vault_collateral_usd          0.00545
+PSM Vault_collateral_usd          0.25462
+Name: 2023-07-18 00:00:00, dtype: float64",,,,,,,,,,,
+2023-07-19,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000056, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.49999999999999944, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000148, 'LP Vault_collateral_usd': 0.06879685361993675, 'RWA Vault_collateral_usd': 0.018824791415991853, 'PSM Vault_collateral_usd': 0.15237835496407223}",,,,,,,,,,
+2023-07-19,,,,,,,,-0.36458306325624457,,,,,,,,,
+2023-07-19,,,,,,,,,2.7929828617830608,,,,,,,,
+2023-07-19,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15114982866493956, 'ETH Vault_collateral_usd': 0.25541644074948244, 'stETH Vault_collateral_usd': 0.1458803325356572, 'Stablecoin Vault_collateral_usd': 0.036823290484926406, 'Altcoin Vault_collateral_usd': 0.04055221038957429, 'LP Vault_collateral_usd': 0.11010847978793775, 'RWA Vault_collateral_usd': 0.0054504437896791755, 'PSM Vault_collateral_usd': 0.25461897359780306}",,,,,,,
+2023-07-19,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000056, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.49999999999999944, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000148, 'LP Vault_collateral_usd': 0.06879685361993675, 'RWA Vault_collateral_usd': 0.018824791415991853, 'PSM Vault_collateral_usd': 0.15237835496407223}",,,,,,
+2023-07-19,,,,,,,,,,,,0.9030593728618199,,,,,
+2023-07-19,,,,,,,,,,,,,0.12304877845877926,,,,
+2023-07-19,,,,,,,,,,,,,,3.1575659250393054e-05,,,
+2023-07-19,,,,,,,,,,,,,,,-0.10779522683247397,,
+2023-07-19,,,,,,,,,,,,,,,,-0.47240986574796895,
+2023-07-19,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-07-14      603,833,082.84591  ...    1,012,927,977.92297
+2023-07-15      600,813,917.43169  ...    1,007,863,338.03335
+2023-07-16      597,809,847.84453  ...    1,002,824,021.34318
+2023-07-17      594,820,798.60530  ...      997,809,901.23647
+2023-07-18      591,846,694.61228  ...      992,820,851.73029
+
+[607 rows x 8 columns]"
+2023-07-19,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-08-13,,8961744217.554983,,,,,,,,,,,,,,,
+2023-08-13,,,,9012614626.554983,,,,,,,,,,,,,
+2023-08-13,,,,,"[0.1        0.05       0.5        0.1        0.01       0.05538989
+ 0.02       0.16461011]",,,,,,,,,,,,
+2023-08-13,,,,,,"BTC Vault_collateral_usd          0.15805
+ETH Vault_collateral_usd          0.25318
+stETH Vault_collateral_usd        0.15106
+Stablecoin Vault_collateral_usd   0.03863
+Altcoin Vault_collateral_usd      0.04710
+LP Vault_collateral_usd           0.08283
+RWA Vault_collateral_usd          0.00564
+PSM Vault_collateral_usd          0.26351
+Name: 2023-08-12 00:00:00, dtype: float64",,,,,,,,,,,
+2023-08-13,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000159, 'ETH Vault_collateral_usd': 0.05000000000000582, 'stETH Vault_collateral_usd': 0.49999999999999917, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05538988689650014, 'RWA Vault_collateral_usd': 0.01999999999999626, 'PSM Vault_collateral_usd': 0.16461011310349824}",,,,,,,,,,
+2023-08-13,,,,,,,,-0.3951013928620716,,,,,,,,,
+2023-08-13,,,,,,,,,2.624628455009629,,,,,,,,
+2023-08-13,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1580507936807973, 'ETH Vault_collateral_usd': 0.2531827114015664, 'stETH Vault_collateral_usd': 0.15105543383142744, 'Stablecoin Vault_collateral_usd': 0.03862927090942641, 'Altcoin Vault_collateral_usd': 0.0471047638926524, 'LP Vault_collateral_usd': 0.08282649911496544, 'RWA Vault_collateral_usd': 0.005644356394659794, 'PSM Vault_collateral_usd': 0.2635061707745048}",,,,,,,
+2023-08-13,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000159, 'ETH Vault_collateral_usd': 0.05000000000000582, 'stETH Vault_collateral_usd': 0.49999999999999917, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05538988689650014, 'RWA Vault_collateral_usd': 0.01999999999999626, 'PSM Vault_collateral_usd': 0.16461011310349824}",,,,,,
+2023-08-13,,,,,,,,,,,,0.8870173173349822,,,,,
+2023-08-13,,,,,,,,,,,,,0.12133455396128036,,,,
+2023-08-13,,,,,,,,,,,,,,3.019729847871701e-05,,,
+2023-08-13,,,,,,,,,,,,,,,-0.15565948795183268,,
+2023-08-13,,,,,,,,,,,,,,,,-0.5507910781123829,
+2023-08-13,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-08-08      532,713,769.04885  ...      893,625,566.77284
+2023-08-09      530,050,200.20360  ...      889,157,438.93897
+2023-08-10      527,399,949.20258  ...      884,711,651.74428
+2023-08-11      524,762,949.45657  ...      880,288,093.48556
+2023-08-12      522,139,134.70929  ...      875,886,653.01813
+
+[632 rows x 8 columns]"
+2023-08-13,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-09-07,,9239327980.02892,,,,,,,,,,,,,,,
+2023-09-07,,,,9290198389.02892,,,,,,,,,,,,,
+2023-09-07,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06984402
+ 0.01051048 0.1596455 ]",,,,,,,,,,,,
+2023-09-07,,,,,,"BTC Vault_collateral_usd          0.14957
+ETH Vault_collateral_usd          0.23957
+stETH Vault_collateral_usd        0.15384
+Stablecoin Vault_collateral_usd   0.03638
+Altcoin Vault_collateral_usd      0.04330
+LP Vault_collateral_usd           0.11504
+RWA Vault_collateral_usd          0.00548
+PSM Vault_collateral_usd          0.25682
+Name: 2023-09-06 00:00:00, dtype: float64",,,,,,,,,,,
+2023-09-07,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000914, 'LP Vault_collateral_usd': 0.06984402030435147, 'RWA Vault_collateral_usd': 0.01051048440407777, 'PSM Vault_collateral_usd': 0.15964549529157313}",,,,,,,,,,
+2023-09-07,,,,,,,,-0.3054642838106975,,,,,,,,,
+2023-09-07,,,,,,,,,2.6082308203820523,,,,,,,,
+2023-09-07,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.149569282363675, 'ETH Vault_collateral_usd': 0.23956885907322842, 'stETH Vault_collateral_usd': 0.15384137484790306, 'Stablecoin Vault_collateral_usd': 0.03637604670677408, 'Altcoin Vault_collateral_usd': 0.043301209556413374, 'LP Vault_collateral_usd': 0.11504447953011218, 'RWA Vault_collateral_usd': 0.005475707500506603, 'PSM Vault_collateral_usd': 0.2568230404213873}",,,,,,,
+2023-09-07,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000914, 'LP Vault_collateral_usd': 0.06984402030435147, 'RWA Vault_collateral_usd': 0.01051048440407777, 'PSM Vault_collateral_usd': 0.15964549529157313}",,,,,,
+2023-09-07,,,,,,,,,,,,0.9312582289007733,,,,,
+2023-09-07,,,,,,,,,,,,,0.11851924438539786,,,,
+2023-09-07,,,,,,,,,,,,,,2.9136951041927496e-05,,,
+2023-09-07,,,,,,,,,,,,,,,-0.08769063647328137,,
+2023-09-07,,,,,,,,,,,,,,,,-0.3931840572350208,
+2023-09-07,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-09-02      469,970,870.75245  ...      788,374,564.62359
+2023-09-03      467,621,016.39868  ...      784,432,691.80047
+2023-09-04      465,282,911.31669  ...      780,510,528.34147
+2023-09-05      462,956,496.76011  ...      776,607,975.69977
+2023-09-06      460,641,714.27631  ...      772,724,935.82127
+
+[657 rows x 8 columns]"
+2023-09-07,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-10-02,,9122739587.640026,,,,,,,,,,,,,,,
+2023-10-02,,,,9173609996.640026,,,,,,,,,,,,,
+2023-10-02,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06393349
+ 0.02       0.15606651]",,,,,,,,,,,,
+2023-10-02,,,,,,"BTC Vault_collateral_usd          0.15409
+ETH Vault_collateral_usd          0.23601
+stETH Vault_collateral_usd        0.16328
+Stablecoin Vault_collateral_usd   0.03638
+Altcoin Vault_collateral_usd      0.04378
+LP Vault_collateral_usd           0.10054
+RWA Vault_collateral_usd          0.00555
+PSM Vault_collateral_usd          0.26039
+Name: 2023-10-01 00:00:00, dtype: float64",,,,,,,,,,,
+2023-10-02,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000094, 'LP Vault_collateral_usd': 0.06393349423253553, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15606650576746398}",,,,,,,,,,
+2023-10-02,,,,,,,,-0.3053721817141492,,,,,,,,,
+2023-10-02,,,,,,,,,2.5433855871982525,,,,,,,,
+2023-10-02,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1540877082523765, 'ETH Vault_collateral_usd': 0.23600632749020037, 'stETH Vault_collateral_usd': 0.16327592520802203, 'Stablecoin Vault_collateral_usd': 0.036381982987806954, 'Altcoin Vault_collateral_usd': 0.043778162010990385, 'LP Vault_collateral_usd': 0.10053848043349631, 'RWA Vault_collateral_usd': 0.0055452988538462035, 'PSM Vault_collateral_usd': 0.26038611476326134}",,,,,,,
+2023-10-02,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.010000000000000094, 'LP Vault_collateral_usd': 0.06393349423253553, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15606650576746398}",,,,,,
+2023-10-02,,,,,,,,,,,,0.9312965237507892,,,,,
+2023-10-02,,,,,,,,,,,,,0.11851336941437858,,,,
+2023-10-02,,,,,,,,,,,,,,2.848757768912402e-05,,,
+2023-10-02,,,,,,,,,,,,,,,-0.1310344946120825,,
+2023-10-02,,,,,,,,,,,,,,,,-0.4364351639039208,
+2023-10-02,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-09-27      414,617,815.77408  ...      695,519,999.93688
+2023-09-28      412,544,726.69521  ...      692,042,399.93720
+2023-09-29      410,482,003.06174  ...      688,582,187.93751
+2023-09-30      408,429,593.04643  ...      685,139,276.99782
+2023-10-01      406,387,445.08119  ...      681,713,580.61283
+
+[682 rows x 8 columns]"
+2023-10-02,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-10-27,,8956504429.057856,,,,,,,,,,,,,,,
+2023-10-27,,,,9007374838.057856,,,,,,,,,,,,,
+2023-10-27,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06558491
+ 0.02       0.15441509]",,,,,,,,,,,,
+2023-10-27,,,,,,"BTC Vault_collateral_usd          0.15070
+ETH Vault_collateral_usd          0.22875
+stETH Vault_collateral_usd        0.17188
+Stablecoin Vault_collateral_usd   0.03520
+Altcoin Vault_collateral_usd      0.04351
+LP Vault_collateral_usd           0.10587
+RWA Vault_collateral_usd          0.00565
+PSM Vault_collateral_usd          0.25843
+Name: 2023-10-26 00:00:00, dtype: float64",,,,,,,,,,,
+2023-10-27,,,,,,,"{'BTC Vault_collateral_usd': 0.1000000000000003, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06558490654422142, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15441509345577975}",,,,,,,,,,
+2023-10-27,,,,,,,,-0.30022105326857423,,,,,,,,,
+2023-10-27,,,,,,,,,2.452288286935336,,,,,,,,
+2023-10-27,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15069648670513772, 'ETH Vault_collateral_usd': 0.22875358261094617, 'stETH Vault_collateral_usd': 0.17188077561971785, 'Stablecoin Vault_collateral_usd': 0.035200009751579504, 'Altcoin Vault_collateral_usd': 0.043514754556348026, 'LP Vault_collateral_usd': 0.10587205322696185, 'RWA Vault_collateral_usd': 0.0056476398411957895, 'PSM Vault_collateral_usd': 0.25843469768811317}",,,,,,,
+2023-10-27,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1000000000000003, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.06558490654422142, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.15441509345577975}",,,,,,
+2023-10-27,,,,,,,,,,,,0.9339351826976747,,,,,
+2023-10-27,,,,,,,,,,,,,0.11636330708214465,,,,
+2023-10-27,,,,,,,,,,,,,,2.7525093402039102e-05,,,
+2023-10-27,,,,,,,,,,,,,,,-0.13445680071997893,,
+2023-10-27,,,,,,,,,,,,,,,,-0.43470537908195517,
+2023-10-27,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-10-22      365,784,230.16311  ...      613,601,823.32007
+2023-10-23      363,955,309.01230  ...      610,533,814.20347
+2023-10-24      362,135,532.46723  ...      607,481,145.13245
+2023-10-25      360,324,854.80490  ...      604,443,739.40679
+2023-10-26      358,523,230.53087  ...      601,421,520.70975
+
+[707 rows x 8 columns]"
+2023-10-27,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-11-21,,8648906461.99557,,,,,,,,,,,,,,,
+2023-11-21,,,,8699776870.99557,,,,,,,,,,,,,
+2023-11-21,,,,,"[0.1        0.05       0.5        0.1        0.01       0.06074627
+ 0.02       0.15925373]",,,,,,,,,,,,
+2023-11-21,,,,,,"BTC Vault_collateral_usd          0.15252
+ETH Vault_collateral_usd          0.22266
+stETH Vault_collateral_usd        0.17900
+Stablecoin Vault_collateral_usd   0.03635
+Altcoin Vault_collateral_usd      0.04954
+LP Vault_collateral_usd           0.09373
+RWA Vault_collateral_usd          0.00585
+PSM Vault_collateral_usd          0.26034
+Name: 2023-11-20 00:00:00, dtype: float64",,,,,,,,,,,
+2023-11-21,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000187, 'ETH Vault_collateral_usd': 0.05000000000000658, 'stETH Vault_collateral_usd': 0.4999999999999993, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.060746271161305564, 'RWA Vault_collateral_usd': 0.01999999999999685, 'PSM Vault_collateral_usd': 0.15925372883869165}",,,,,,,,,,
+2023-11-21,,,,,,,,-0.3324393659469873,,,,,,,,,
+2023-11-21,,,,,,,,,2.321712337130574,,,,,,,,
+2023-11-21,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1525227370823918, 'ETH Vault_collateral_usd': 0.22266071805514986, 'stETH Vault_collateral_usd': 0.1790045400349122, 'Stablecoin Vault_collateral_usd': 0.03635212794227056, 'Altcoin Vault_collateral_usd': 0.049542376368202044, 'LP Vault_collateral_usd': 0.0937264768114896, 'RWA Vault_collateral_usd': 0.005847323414649668, 'PSM Vault_collateral_usd': 0.2603437002909342}",,,,,,,
+2023-11-21,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000187, 'ETH Vault_collateral_usd': 0.05000000000000658, 'stETH Vault_collateral_usd': 0.4999999999999993, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.060746271161305564, 'RWA Vault_collateral_usd': 0.01999999999999685, 'PSM Vault_collateral_usd': 0.15925372883869165}",,,,,,
+2023-11-21,,,,,,,,,,,,0.9166333105032672,,,,,
+2023-11-21,,,,,,,,,,,,,0.11394171674518938,,,,
+2023-11-21,,,,,,,,,,,,,,2.6541517030775614e-05,,,
+2023-11-21,,,,,,,,,,,,,,,-0.14806474406397824,,
+2023-11-21,,,,,,,,,,,,,,,,-0.48053065152799634,
+2023-11-21,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-11-16      322,702,252.40134  ...      541,331,949.64326
+2023-11-17      321,088,741.13933  ...      538,625,289.89504
+2023-11-18      319,483,297.43364  ...      535,932,163.44556
+2023-11-19      317,885,880.94647  ...      533,252,502.62834
+2023-11-20      316,296,451.54174  ...      530,586,240.11519
+
+[732 rows x 8 columns]"
+2023-11-21,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2023-12-16,,9083729302.464695,,,,,,,,,,,,,,,
+2023-12-16,,,,9134599711.464695,,,,,,,,,,,,,
+2023-12-16,,,,,"[0.1       0.05      0.5       0.1       0.01      0.0590488 0.02
+ 0.1609512]",,,,,,,,,,,,
+2023-12-16,,,,,,"BTC Vault_collateral_usd          0.15455
+ETH Vault_collateral_usd          0.22064
+stETH Vault_collateral_usd        0.18387
+Stablecoin Vault_collateral_usd   0.03512
+Altcoin Vault_collateral_usd      0.04674
+LP Vault_collateral_usd           0.09281
+RWA Vault_collateral_usd          0.00557
+PSM Vault_collateral_usd          0.26069
+Name: 2023-12-15 00:00:00, dtype: float64",,,,,,,,,,,
+2023-12-16,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000124, 'ETH Vault_collateral_usd': 0.05000000000000549, 'stETH Vault_collateral_usd': 0.4999999999999993, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.059048803136769606, 'RWA Vault_collateral_usd': 0.01999999999999725, 'PSM Vault_collateral_usd': 0.1609511968632285}",,,,,,,,,,
+2023-12-16,,,,,,,,-0.23021394712183366,,,,,,,,,
+2023-12-16,,,,,,,,,2.3835529965559097,,,,,,,,
+2023-12-16,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15455403380632468, 'ETH Vault_collateral_usd': 0.22063635850878655, 'stETH Vault_collateral_usd': 0.18387372776904942, 'Stablecoin Vault_collateral_usd': 0.035115303831039814, 'Altcoin Vault_collateral_usd': 0.04674448476118782, 'LP Vault_collateral_usd': 0.09281226253434913, 'RWA Vault_collateral_usd': 0.005568980645769661, 'PSM Vault_collateral_usd': 0.260694848143493}",,,,,,,
+2023-12-16,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000124, 'ETH Vault_collateral_usd': 0.05000000000000549, 'stETH Vault_collateral_usd': 0.4999999999999993, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.059048803136769606, 'RWA Vault_collateral_usd': 0.01999999999999725, 'PSM Vault_collateral_usd': 0.1609511968632285}",,,,,,
+2023-12-16,,,,,,,,,,,,0.9731061203494354,,,,,
+2023-12-16,,,,,,,,,,,,,0.11298342507261058,,,,
+2023-12-16,,,,,,,,,,,,,,2.6137669436777436e-05,,,
+2023-12-16,,,,,,,,,,,,,,,-0.06297636870642034,,
+2023-12-16,,,,,,,,,,,,,,,,-0.29321645349769077,
+2023-12-16,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2023-12-11      284,694,459.51364  ...      477,574,004.13022
+2023-12-12      283,270,987.21607  ...      475,186,134.10957
+2023-12-13      281,854,632.27999  ...      472,810,203.43902
+2023-12-14      280,445,359.11859  ...      470,446,152.42183
+2023-12-15      279,043,132.32299  ...      468,093,921.65972
+
+[757 rows x 8 columns]"
+2023-12-16,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2024-01-10,,9160006738.58985,,,,,,,,,,,,,,,
+2024-01-10,,,,9210877147.58985,,,,,,,,,,,,,
+2024-01-10,,,,,"[0.1        0.05       0.5        0.1        0.01       0.05877391
+ 0.02       0.16122609]",,,,,,,,,,,,
+2024-01-10,,,,,,"BTC Vault_collateral_usd          0.15482
+ETH Vault_collateral_usd          0.21792
+stETH Vault_collateral_usd        0.18778
+Stablecoin Vault_collateral_usd   0.03350
+Altcoin Vault_collateral_usd      0.04803
+LP Vault_collateral_usd           0.09535
+RWA Vault_collateral_usd          0.00552
+PSM Vault_collateral_usd          0.25707
+Name: 2024-01-09 00:00:00, dtype: float64",,,,,,,,,,,
+2024-01-10,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000038, 'ETH Vault_collateral_usd': 0.05000000000000114, 'stETH Vault_collateral_usd': 0.49999999999999983, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05877391198412511, 'RWA Vault_collateral_usd': 0.019999999999999397, 'PSM Vault_collateral_usd': 0.1612260880158742}",,,,,,,,,,
+2024-01-10,,,,,,,,-0.17755498575281742,,,,,,,,,
+2024-01-10,,,,,,,,,2.3297525952315747,,,,,,,,
+2024-01-10,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1548232683306706, 'ETH Vault_collateral_usd': 0.2179173426088718, 'stETH Vault_collateral_usd': 0.18778331953628694, 'Stablecoin Vault_collateral_usd': 0.033501942719099946, 'Altcoin Vault_collateral_usd': 0.04803422503428225, 'LP Vault_collateral_usd': 0.09534721107426497, 'RWA Vault_collateral_usd': 0.005522862609595325, 'PSM Vault_collateral_usd': 0.25706982808692824}",,,,,,,
+2024-01-10,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000038, 'ETH Vault_collateral_usd': 0.05000000000000114, 'stETH Vault_collateral_usd': 0.49999999999999983, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05877391198412511, 'RWA Vault_collateral_usd': 0.019999999999999397, 'PSM Vault_collateral_usd': 0.1612260880158742}",,,,,,
+2024-01-10,,,,,,,,,,,,1.0043669557452473,,,,,
+2024-01-10,,,,,,,,,,,,,0.11234053575286197,,,,
+2024-01-10,,,,,,,,,,,,,,2.5073075809843922e-05,,,
+2024-01-10,,,,,,,,,,,,,,,-0.10396507639472605,,
+2024-01-10,,,,,,,,,,,,,,,,-0.2815451352233533,
+2024-01-10,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2024-01-05      251,163,215.23830  ...      421,325,453.94980
+2024-01-06      249,907,399.16211  ...      419,218,826.68005
+2024-01-07      248,657,862.16630  ...      417,122,732.54665
+2024-01-08      247,414,572.85546  ...      415,037,118.88391
+2024-01-09      246,177,499.99119  ...      412,961,933.28949
+
+[782 rows x 8 columns]"
+2024-01-10,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2024-02-04,,9231417587.784647,,,,,,,,,,,,,,,
+2024-02-04,,,,9282287996.784649,,,,,,,,,,,,,
+2024-02-04,,,,,"[0.1        0.05       0.5        0.1        0.01       0.05909918
+ 0.02       0.16090082]",,,,,,,,,,,,
+2024-02-04,,,,,,"BTC Vault_collateral_usd          0.15332
+ETH Vault_collateral_usd          0.20959
+stETH Vault_collateral_usd        0.19800
+Stablecoin Vault_collateral_usd   0.03465
+Altcoin Vault_collateral_usd      0.04959
+LP Vault_collateral_usd           0.09802
+RWA Vault_collateral_usd          0.00548
+PSM Vault_collateral_usd          0.25136
+Name: 2024-02-03 00:00:00, dtype: float64",,,,,,,,,,,
+2024-02-04,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000023, 'ETH Vault_collateral_usd': 0.05000000000000213, 'stETH Vault_collateral_usd': 0.4999999999999992, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000003, 'LP Vault_collateral_usd': 0.05909917843780987, 'RWA Vault_collateral_usd': 0.019999999999999005, 'PSM Vault_collateral_usd': 0.16090082156218946}",,,,,,,,,,
+2024-02-04,,,,,,,,-0.12230822337295819,,,,,,,,,
+2024-02-04,,,,,,,,,2.331146558266044,,,,,,,,
+2024-02-04,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1533226734376924, 'ETH Vault_collateral_usd': 0.20958589994940113, 'stETH Vault_collateral_usd': 0.1979954258581242, 'Stablecoin Vault_collateral_usd': 0.03465188770137044, 'Altcoin Vault_collateral_usd': 0.04958530242012946, 'LP Vault_collateral_usd': 0.09801721046835621, 'RWA Vault_collateral_usd': 0.00548037391402005, 'PSM Vault_collateral_usd': 0.2513612262509059}",,,,,,,
+2024-02-04,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.10000000000000023, 'ETH Vault_collateral_usd': 0.05000000000000213, 'stETH Vault_collateral_usd': 0.4999999999999992, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000003, 'LP Vault_collateral_usd': 0.05909917843780987, 'RWA Vault_collateral_usd': 0.019999999999999005, 'PSM Vault_collateral_usd': 0.16090082156218946}",,,,,,
+2024-02-04,,,,,,,,,,,,1.0388498915252617,,,,,
+2024-02-04,,,,,,,,,,,,,0.10910637500756669,,,,
+2024-02-04,,,,,,,,,,,,,,2.453454781639002e-05,,,
+2024-02-04,,,,,,,,,,,,,,,-0.1013289578568719,,
+2024-02-04,,,,,,,,,,,,,,,,-0.22366171577764649,
+2024-02-04,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2024-01-30      221,581,272.76733  ...      371,701,844.34410
+2024-01-31      220,473,366.40350  ...      369,843,335.12238
+2024-02-01      219,370,999.57148  ...      367,994,118.44677
+2024-02-02      218,274,144.57362  ...      366,154,147.85454
+2024-02-03      217,182,773.85075  ...      364,323,377.11526
+
+[807 rows x 8 columns]"
+2024-02-04,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2024-02-29,,9036639832.466906,,,,,,,,,,,,,,,
+2024-02-29,,,,9087510241.466906,,,,,,,,,,,,,
+2024-02-29,,,,,"[0.1        0.05       0.5        0.1        0.01       0.05048717
+ 0.02       0.16951283]",,,,,,,,,,,,
+2024-02-29,,,,,,"BTC Vault_collateral_usd          0.15669
+ETH Vault_collateral_usd          0.20737
+stETH Vault_collateral_usd        0.21318
+Stablecoin Vault_collateral_usd   0.02948
+Altcoin Vault_collateral_usd      0.05709
+LP Vault_collateral_usd           0.07841
+RWA Vault_collateral_usd          0.00560
+PSM Vault_collateral_usd          0.25219
+Name: 2024-02-28 00:00:00, dtype: float64",,,,,,,,,,,
+2024-02-29,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000053, 'LP Vault_collateral_usd': 0.050487165214418754, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1695128347855823}",,,,,,,,,,
+2024-02-29,,,,,,,,-0.1310606633563375,,,,,,,,,
+2024-02-29,,,,,,,,,2.2443627438057066,,,,,,,,
+2024-02-29,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.15668759926720116, 'ETH Vault_collateral_usd': 0.20736714912568477, 'stETH Vault_collateral_usd': 0.21318385159352718, 'Stablecoin Vault_collateral_usd': 0.02948272466282908, 'Altcoin Vault_collateral_usd': 0.05708895303291694, 'LP Vault_collateral_usd': 0.07840626213077997, 'RWA Vault_collateral_usd': 0.005597837872894492, 'PSM Vault_collateral_usd': 0.2521856223141665}",,,,,,,
+2024-02-29,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.1, 'ETH Vault_collateral_usd': 0.05, 'stETH Vault_collateral_usd': 0.5, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01000000000000053, 'LP Vault_collateral_usd': 0.050487165214418754, 'RWA Vault_collateral_usd': 0.02, 'PSM Vault_collateral_usd': 0.1695128347855823}",,,,,,
+2024-02-29,,,,,,,,,,,,1.0355313298524236,,,,,
+2024-02-29,,,,,,,,,,,,,0.10621016739164246,,,,
+2024-02-29,,,,,,,,,,,,,,2.375423407162044e-05,,,
+2024-02-29,,,,,,,,,,,,,,,-0.12717022182470264,,
+2024-02-29,,,,,,,,,,,,,,,,-0.2582546394151118,
+2024-02-29,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2024-02-24      195,483,484.29370  ...      327,922,891.42177
+2024-02-25      194,506,066.87223  ...      326,283,276.96466
+2024-02-26      193,533,536.53787  ...      324,651,860.57984
+2024-02-27      192,565,868.85518  ...      323,028,601.27694
+2024-02-28      191,603,039.51091  ...      321,413,458.27056
+
+[832 rows x 8 columns]"
+2024-02-29,,,"{'ETH Vault_dai_ceiling': -0.5, 'stETH Vault_dai_ceiling': 0.5, 'BTC Vault_dai_ceiling': -0.5, 'Altcoin Vault_dai_ceiling': -0.25, 'Stablecoin Vault_dai_ceiling': 0.25, 'PSM Vault_dai_ceiling': -0.5}",,,,,,,,,,,,,,
+2024-03-21,,7875843936.639101,,,,,,,,,,,,,,,
+2024-03-21,,,,7926714345.639101,,,,,,,,,,,,,
+2024-03-21,,,,,"[0.1        0.05       0.5        0.1        0.01       0.05795473
+ 0.02       0.16204527]",,,,,,,,,,,,
+2024-03-21,,,,,,"BTC Vault_collateral_usd          0.14960
+ETH Vault_collateral_usd          0.17905
+stETH Vault_collateral_usd        0.23788
+Stablecoin Vault_collateral_usd   0.03629
+Altcoin Vault_collateral_usd      0.05906
+LP Vault_collateral_usd           0.09537
+RWA Vault_collateral_usd          0.00642
+PSM Vault_collateral_usd          0.23632
+Name: 2024-03-20 00:00:00, dtype: float64",,,,,,,,,,,
+2024-03-21,,,,,,,"{'BTC Vault_collateral_usd': 0.100000000000001, 'ETH Vault_collateral_usd': 0.0500000000000031, 'stETH Vault_collateral_usd': 0.49999999999999944, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05795473043720061, 'RWA Vault_collateral_usd': 0.019999999999998217, 'PSM Vault_collateral_usd': 0.16204526956279935}",,,,,,,,,,
+2024-03-21,,,,,,,,-0.3360798090674023,,,,,,,,,
+2024-03-21,,,,,,,,,2.019798023135332,,,,,,,,
+2024-03-21,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.14960091032486605, 'ETH Vault_collateral_usd': 0.17905490903598695, 'stETH Vault_collateral_usd': 0.23788060546865905, 'Stablecoin Vault_collateral_usd': 0.03629163580777797, 'Altcoin Vault_collateral_usd': 0.05905986231939925, 'LP Vault_collateral_usd': 0.09537279447899732, 'RWA Vault_collateral_usd': 0.006417590792581857, 'PSM Vault_collateral_usd': 0.23632169177173154}",,,,,,,
+2024-03-21,,,,,,,,,,,"{'BTC Vault_collateral_usd': 0.100000000000001, 'ETH Vault_collateral_usd': 0.0500000000000031, 'stETH Vault_collateral_usd': 0.49999999999999944, 'Stablecoin Vault_collateral_usd': 0.1, 'Altcoin Vault_collateral_usd': 0.01, 'LP Vault_collateral_usd': 0.05795473043720061, 'RWA Vault_collateral_usd': 0.019999999999998217, 'PSM Vault_collateral_usd': 0.16204526956279935}",,,,,,
+2024-03-21,,,,,,,,,,,,0.9130747296395566,,,,,
+2024-03-21,,,,,,,,,,,,,0.09697433369456514,,,,
+2024-03-21,,,,,,,,,,,,,,2.3558778322027343e-05,,,
+2024-03-21,,,,,,,,,,,,,,,-0.2246860802951594,,
+2024-03-21,,,,,,,,,,,,,,,,-0.5607894481408837,
+2024-03-21,,,,,,,,,,,,,,,,,"            ETH Vault_dai_ceiling  ...  PSM Vault_dai_ceiling
+2021-11-19    4,215,499,587.09872  ...    3,593,103,707.31785
+2021-11-20    4,185,875,620.48578  ...    3,604,384,386.93336
+2021-11-21    4,185,229,052.82756  ...    3,604,384,386.93336
+2021-11-22    4,167,338,922.83872  ...    3,674,297,040.97279
+2021-11-23    4,152,215,276.92244  ...    3,670,722,718.34453
+...                           ...  ...                    ...
+2024-03-16      175,952,226.56962  ...      295,159,271.88058
+2024-03-17      175,072,465.43677  ...      293,683,475.52118
+2024-03-18      174,197,103.10959  ...      292,215,058.14357
+2024-03-19      173,326,117.59404  ...      290,753,982.85285
+2024-03-20      172,459,487.00607  ...      289,300,212.93859
+
+[853 rows x 8 columns]"
